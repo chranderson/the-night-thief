@@ -1,0 +1,46 @@
+// small nav
+.nav-marker {
+	height:30px;
+	width:21px;
+	margin-top:-2px;
+	margin-left:10px;
+	// -webkit-transform:rotate(-90deg);
+}
+
+
+
+
+
+
+
+/////////////////////////////////////////
+// large
+////////////////////////////////////////
+nav#mainMenu {
+	padding:0;
+}
+#mainMenu {
+	position:absolute;
+	height:100%;
+	background:#313131;
+	border-right:1px solid #212121;
+	@media #{$medium-up} {width:120px; z-index:10;}
+	@media #{$large-up} {width:160px;}
+	@media #{$xlarge-up} {width:200px;}
+}
+
+.logo {
+	margin-top:5px;
+	width:180px;
+	height:45px;
+	display:block;
+	margin:0 auto;
+	fill: $black;
+	fill: $red;
+	fill: $white;
+	opacity: 0.7;
+
+	@media #{$medium-up} {width:100px;height:120px;}
+	@media #{$large-up} {width:140px;height:160px;}
+	@media #{$xlarge-up} {}
+}

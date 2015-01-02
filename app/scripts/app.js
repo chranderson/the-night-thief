@@ -1,0 +1,43 @@
+'use strict';
+
+/**
+ * @ngdoc overview
+ * @name theNightThiefApp
+ * @description
+ * # theNightThiefApp
+ *
+ * Main module of the application.
+ */
+angular
+  .module('theNightThiefApp', [
+    'ngAnimate',
+    'ngAria',
+    'ngCookies',
+    'ngMessages',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'mm.foundation.offcanvas'
+  ])
+  .config(function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl'
+      })
+      .when('/audio', {
+        templateUrl: 'views/audio.html',
+        controller: 'AudioCtrl'
+      })
+      .when('/film', {
+        templateUrl: 'views/film.html',
+        controller: 'FilmCtrl'
+      })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+  });
