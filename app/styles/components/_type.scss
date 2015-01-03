@@ -1,7 +1,11 @@
 * {
 	color: $white;
 	letter-spacing: 0.1em;
+	font-weight:300;
+}
 
+ul.off-canvas-list li a {
+	color: $white;
 }
 h1.title {
 	font-weight:300;

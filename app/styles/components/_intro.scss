@@ -1,0 +1,94 @@
+#intro-logo {
+	.intro-globe {
+		fill: $red;
+	}
+	.intro-man {
+		fill: $black;
+	}
+	.intro-text {
+		fill: $white;
+	}
+
+
+	// display:block;
+	// fill: $white;
+	// @media #{$medium-up} {padding-left:130px;}
+	@media #{$large-up} {max-width:70%; margin-left:15%; }
+	// @media #{$xlarge-up} {padding-left:190px;}
+}
+
+
+// ////////////////////////
+// Main Elements - Loading
+// ////////////////////////
+
+// #globe {
+// 	opacity: 1;
+//   visibility: visible;
+//   -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+//   -moz-transition: opacity .3s 0s, visibility 0s 0s;
+//   transition: opacity .3s 0s, visibility 0s 0s;
+// }
+// #globe.fadeout {
+// 	opacity: 0;
+//   visibility: hidden;
+//   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+//   -moz-transition: opacity .3s 0s, visibility 0s .3s;
+//   transition: opacity .3s 0s, visibility 0s .3s;
+// }
+// #man {
+// 	opacity: 1;
+//   visibility: visible;
+//   -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+//   -moz-transition: opacity .3s 0s, visibility 0s 0s;
+//   transition: opacity .3s 0s, visibility 0s 0s;
+// }
+// #man.fadeout {
+// 	opacity: 0;
+//   visibility: hidden;
+//   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+//   -moz-transition: opacity .3s 0s, visibility 0s .3s;
+//   transition: opacity .3s 0s, visibility 0s .3s;
+// }
+// #text {
+// 	opacity: 1;
+//   visibility: visible;
+//   -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+//   -moz-transition: opacity .3s 0s, visibility 0s 0s;
+//   transition: opacity .3s 0s, visibility 0s 0s;
+// }
+// #text.fadeout {
+// 	opacity: 1;
+//   visibility: hidden;
+//   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+//   -moz-transition: opacity .3s 0s, visibility 0s .3s;
+//   transition: opacity .3s 0s, visibility 0s .3s;
+// }
+
+
+
+
+
+
+#particle-js {
+	height:100%;
+	width:100%;
+	// display:block;
+}
+
+canvas {
+	z-index:-1;
+	position:fixed;
+	top:50px;
+	left:0;
+	@media #{$medium-up} {position:fixed;left:130px;}
+	@media #{$large-up} {left:170px;}
+	@media #{$xlarge-up} {left:190px;}
+}
+
+hr.dark {
+	background:$black;
+	color: $black;
+	border-top:$gray;
+	// border-bottom:$gray;
+}

@@ -10,9 +10,11 @@
 	// // overflow-y:scroll;
 	@media #{$medium-up} {padding-left:130px;}
 	@media #{$large-up} {padding-left:170px;}
-	@media #{$xlarge-up} {padding-left:200px;}
+	@media #{$xlarge-up} {padding-left:190px;}
 }
 
 .content-inner {
 	padding:2em;
+
+	@media #{$xlarge-up} {padding:1.5em	;}
 }

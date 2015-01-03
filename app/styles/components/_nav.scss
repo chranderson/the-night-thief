@@ -7,11 +7,37 @@
 	// -webkit-transform:rotate(-90deg);
 }
 
+.side-nav li {
+	margin:0;
+	border-top:1px dotted $black;
+	text-align:right;
+}
 
+.side-nav li:last-of-type {
+	border-bottom:1px dotted $black;
+}
 
+ul.off-canvas-list li a {
+	padding:.8em 0;
+	padding-left:1.5em;
+}
 
+ul.side-nav li a:not(.button) {
 
-
+	color: $white;
+	@media #{$medium-up} {
+		padding:1em 0;
+		padding-right:1.5em;
+	}
+	@media #{$large-up} {
+		padding:1em 0;
+		padding-right:1.5em;
+	}
+	@media #{$xlarge-up} {
+		padding:1em 0;
+		padding-right:2em;
+	}
+}
 
 /////////////////////////////////////////
 // large
@@ -26,7 +52,7 @@ nav#mainMenu {
 	border-right:1px solid #212121;
 	@media #{$medium-up} {width:120px; z-index:10;}
 	@media #{$large-up} {width:160px;}
-	@media #{$xlarge-up} {width:200px;}
+	@media #{$xlarge-up} {width:180px;}
 }
 
 .logo {
