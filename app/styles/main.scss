@@ -18,13 +18,23 @@
   padding: 0.2em 0;
 }
 
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+  overflow:hidden;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 /* Space out content a bit */
 html, body {
   // padding-top: 20px;
   // padding-bottom: 20px;
-  overflow:hidden;
+  // overflow:hidden;
   background: $black;
-  height:100%;
+  // height:100%;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -35,9 +45,24 @@ html, body {
   padding-right: 15px;
 }
 
+.off-canvas-wrap {
+	position:absolute;
+	top:0;
+	bottom:0;
+	// overflow-y:auto;
+}
 .off-canvas-wrap, .inner-wrap {
 	// margin-top:-20px;
 	height:100%;
+	// overflow-y:auto;
+border: 1px solid blue !important;
 }
 
-.row {overflow:scroll;}
+.inner-wrap {
+	height:100%;
+border: 1px solid pink !important;
+	// overflow-y:scroll;
+	padding-bottom:2em;
+}
+
+// .row {overflow:scroll;}

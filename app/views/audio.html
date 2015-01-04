@@ -1,7 +1,19 @@
-<h1>Audio Page</h1>
-<hr/>
+<!-- <h1>Audio Page</h1> -->
+<!-- <hr/> -->
 
 <div plangular="https://soundcloud.com/thenightthief/sets/the-night-thief-website-songs">
+		<div class="player-control">
+			<ul class="button-group even-3">
+				<li><a role="button" aria-label="previous track" class="button audio-btn" ng-click="previous()"><svg plangular-icon="previous"></svg></a></li>
+				<li>
+					<a role="button" aria-label="play and pause button" class="button audio-btn" ng-click="playPause(player.playlistIndex)">
+						<svg ng-if="player.tracks[player.i] != track || !player.playing" plangular-icon="play"></svg>
+						<svg ng-if="player.tracks[player.i] == track && player.playing" plangular-icon="pause"></svg>
+					</a>
+				</li>
+				<li><a role="button" aria-label="next track" class="button audio-btn" ng-click="next()"><svg plangular-icon="next"></svg></a></li>
+			</ul>
+		</div>
 		<div class="player-head">
 			<div class="twenty">
 				<img src="http://placehold.it/100x100" ng-src="{{ player.currentTrack.artwork_url  }}" alt="{{ player.currentTrack.title || '&nbsp;' }} by {{ player.currentTrack.user.username }}" />
@@ -13,17 +25,9 @@
 				<p class="track-time">{{ player.currentTime | prettyTime }} - {{ player.duration | prettyTime }}</p>
 			</div>
 		</div>
+		<div class="player-body">
 
-		<ul class="button-group">
-			<li><a role="button" aria-label="previous track" class="button audio-btn" ng-click="previous()"><svg plangular-icon="previous"></svg></a></li>
-			<li>
-				<a role="button" aria-label="play and pause button" class="button audio-btn" ng-click="playPause(player.playlistIndex)">
-					<svg ng-if="player.tracks[player.i] != track || !player.playing" plangular-icon="play"></svg>
-					<svg ng-if="player.tracks[player.i] == track && player.playing" plangular-icon="pause"></svg>
-				</a>
-			</li>
-			<li><a role="button" aria-label="next track" class="button audio-btn" ng-click="next()"><svg plangular-icon="next"></svg></a></li>
-		</ul>
+		</div>
 
 		<ul class="track-list">
 			<li ng-repeat="t in tracks" ng-class="{ 'darken': player.currentTrack == t }">

@@ -1,20 +1,22 @@
+// * {
+//    border: 1px solid red !important;
+// }
+
 .plangular-icon {
 	height:1em;
 	width:1em;
 }
 
-.play-icon {
-	height:1.5em;
-	width:1.5em;
+.player-control {
+	padding:1rem;
+	border: 1px solid red !important;
 }
 
 ul.button-group {
-	margin-left:1.5em;
 }
 
-.audio-btn {
+.audio-btn, .audio-btn:hover, .audio-btn:focus {
 	background:transparent;
-	// padding:0;
 
 	svg {
 		fill: $white;
@@ -23,16 +25,8 @@ ul.button-group {
 	}
 }
 
-.audio-btn:focus {
-	background:transparent;
-	}
-.audio-btn:hover {
-	background:transparent;
-
-	svg {
+.audio-btn:hover svg{
 		// fill: $white - 50;
-		opacity: .2;
-	}
 }
 
 
