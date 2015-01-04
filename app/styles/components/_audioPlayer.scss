@@ -8,8 +8,12 @@
 }
 
 .player-control {
-	padding:1rem;
+	// padding:1rem;
 	border: 1px solid red !important;
+
+	li a {
+		margin-bottom:0;
+	}
 }
 
 ul.button-group {

@@ -1,13 +1,7 @@
 .content {
-	// padding: rem-calc(40);
 	height:100%;
-	// z-index:0;
+	overflow-x:hidden;
 	overflow-y:scroll;
-	// margin-right:0;
-	// width:100%;
-	// background:rgba(255,0,0,0.4);
-
-	// // overflow-y:scroll;
 	@media #{$medium-up} {margin-left:120px; padding:1em;}
 	@media #{$large-up} {margin-left:160px;}
 	@media #{$xlarge-up} {padding-left:190px; padding:1.5em;}
@@ -17,7 +11,7 @@
 
 .content-inner {
 	// width:100%;
-
+// overflow-x:hidden;
 	// height:100%;
 	// border: 1px solid red !important;
 	// @media #{$large-up} {padding:1em;}
