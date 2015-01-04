@@ -34,7 +34,10 @@ module.exports = function(config) {
     ],
 
     // list of files / patterns to exclude
-    exclude: [],
+    exclude: [
+    	'app/scripts/particles.js',
+    	'app/scripts/ng-plangular.min.js'
+    ],
 
     // web server port
     port: 8080,

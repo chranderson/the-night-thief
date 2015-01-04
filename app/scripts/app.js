@@ -17,7 +17,8 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'mm.foundation.offcanvas'
+    'mm.foundation.offcanvas',
+    'plangular'
   ])
   .config(function ($routeProvider) {
     $routeProvider
