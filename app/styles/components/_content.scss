@@ -14,7 +14,7 @@
 }
 
 .content-inner {
-	padding:2em;
 
+	@media #{$large-up} {padding:2em;}
 	@media #{$xlarge-up} {padding:1.5em	;}
 }

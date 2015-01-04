@@ -8,6 +8,10 @@
 	width:1.5em;
 }
 
+ul.button-group {
+	margin-left:1.5em;
+}
+
 .audio-btn {
 	background:transparent;
 	// padding:0;
@@ -18,7 +22,11 @@
 		transition: .5s ease-in;
 	}
 }
-.audio-btn:hover, .audio-btn:focus {
+
+.audio-btn:focus {
+	background:transparent;
+	}
+.audio-btn:hover {
 	background:transparent;
 
 	svg {
