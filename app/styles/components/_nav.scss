@@ -1,20 +1,32 @@
 // small nav
+.tab-bar {
+	height:3.3rem;
+	background:transparent;
+	// background:blue;
+
+	.left-small {
+		width:3.3rem;
+		height:3.3rem;
+		border:none;
+	}
+}
+
 .nav-marker {
 	height:30px;
 	width:21px;
-	margin-top:-2px;
-	margin-left:10px;
+	margin-top:5px;
+	margin-left:13px;
 	// -webkit-transform:rotate(-90deg);
 }
 
 .side-nav li {
 	margin:0;
-	border-top:1px dotted $black;
+	border-top:1px solid $black;
 	text-align:right;
 }
 
 .side-nav li:last-of-type {
-	border-bottom:1px dotted $black;
+	border-bottom:1px solid $black;
 }
 
 ul.off-canvas-list li a {
@@ -56,15 +68,17 @@ nav#mainMenu {
 }
 
 .logo {
-	margin-top:5px;
+	// margin-top:5px;
+	// margin:10px 0;
 	width:180px;
-	height:45px;
+	height:100%;
 	display:block;
 	margin:0 auto;
+	margin-top:4px;
 	fill: $black;
 	fill: $red;
 	fill: $white;
-	opacity: 0.7;
+	// opacity: 0.7;
 
 	@media #{$medium-up} {width:100px;height:120px;}
 	@media #{$large-up} {width:140px;height:160px;}

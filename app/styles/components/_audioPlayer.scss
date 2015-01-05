@@ -74,8 +74,8 @@ ul.track-list {
 
 	li {
 		transition: .3s ease-in;
-		border-bottom: 1px dotted $black - 30;
-		// border-bottom: 1px dotted $white;
+		border-bottom: 1px solid $black - 5;
+		// border-bottom: 1px solid $white;
 		// padding: 1em;
 
 		.plays {
@@ -90,7 +90,7 @@ ul.track-list {
 		}
 	}
 	li:first-child {
-		border-top:1px dotted $black - 20;
+		border-top:1px solid $black - 5;
 	}
 }
 

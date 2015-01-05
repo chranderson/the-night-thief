@@ -8,10 +8,78 @@ ul.off-canvas-list li a {
 	color: $white;
 }
 h1.title {
-	font-weight:300;
+	// font-weight:300;
 	text-transform: lowercase;
 }
 
 h1,h2,h3,h4,h5,h6 {
 	color: $white;
+	font-family:"Franklin ITC",sans-serif;
+}
+
+.entry-header .entry-title {
+	font-weight: bold;
+
+}
+
+.entry-header .entry-title a {
+	color: $white;
+	font-weight:bold;
+	font-size:30px;
+	line-height: 36px;
+
+	@media #{$medium-up} {
+		font-size:48px;
+		line-height:56px;
+	}
+	@media #{$large-up} {
+
+	}
+	@media #{$xlarge-up} {
+
+	}
+}
+
+.entry-header .entry-title a:hover {
+	text-decoration: underline;
+
+}
+
+.entry-header .entry-details {
+	font-family: georgia;
+	font-style: italic;
+	font-size:14px;
+	line-height:20px;
+
+	@media #{$medium-up} {
+		font-size:18px;
+		line-height:30px;
+	}
+	@media #{$large-up} {
+
+	}
+	@media #{$xlarge-up} {
+
+	}
+}
+
+.entry-header .entry-summary {
+	font-size:18px;
+	line-height:28px;
+	font-family:georgia;
+	// font-weight:300;
+	font-style: normal;
+	text-align:left;
+
+	@media #{$medium-up} {
+		font-size:20px;
+		line-height:32px;
+	}
+	@media #{$large-up} {
+		font-size:24px;
+		line-height:36px;
+	}
+	@media #{$xlarge-up} {
+		// font-size:26px;
+	}
 }
