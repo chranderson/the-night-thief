@@ -4,4 +4,35 @@
 	// overflow-x:hidden;
 }
 
+#intro-logo, #vert-logo {
+	// background:blue;
+}
 
+
+.left-off-canvas-menu {
+	background: $black - 15;
+}
+
+ul.off-canvas-list li a {
+	border-bottom: 1px solid $black;
+}
+ul.off-canvas-list li a:active, ul.off-canvas-list li a:hover {
+	background: $black;
+}
+
+.move-right .exit-off-canvas {
+	background: $black - 20;
+	opacity: .5;
+}
+
+
+// audioPlayer
+
+.audioPlayer {
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	height:50px;
+	background:$black;
+}

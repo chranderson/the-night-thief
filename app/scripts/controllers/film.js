@@ -8,10 +8,8 @@
  * Controller of the theNightThiefApp
  */
 angular.module('theNightThiefApp')
-  .controller('FilmCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+
+  .controller('FilmCtrl', function () {
+
+
   });

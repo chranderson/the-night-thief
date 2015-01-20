@@ -1,7 +1,8 @@
 .content {
 	height:100%;
 	overflow-x:hidden;
-	overflow-y:scroll;
+	overflow-y:auto;
+	-webkit-overflow-scrolling: touch;
 	@media #{$medium-up} {
 		margin-left:120px;
 		// padding:1em;
@@ -13,7 +14,7 @@
 		padding-left:190px;
 		// padding:1.5em;
 	}
-	border: 1px solid red !important;
+	// border: 1px solid red !important;
 	padding-bottom:2em;
 }
 

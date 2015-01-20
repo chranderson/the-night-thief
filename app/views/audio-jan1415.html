@@ -1,0 +1,40 @@
+<!-- <h1>Audio Page</h1> -->
+<!-- <hr/> -->
+
+<div plangular="https://soundcloud.com/thenightthief/sets/the-night-thief-website-songs">
+		<div class="player-control">
+			<ul class="button-group even-3">
+				<li><a role="button" aria-label="previous track" class="button audio-btn" ng-click="previous()"><svg plangular-icon="previous"></svg></a></li>
+				<li>
+					<a role="button" aria-label="play and pause button" class="button audio-btn" ng-click="playPause(player.playlistIndex)">
+						<svg ng-if="player.tracks[player.i] != track || !player.playing" plangular-icon="play"></svg>
+						<svg ng-if="player.tracks[player.i] == track && player.playing" plangular-icon="pause"></svg>
+					</a>
+				</li>
+				<li><a role="button" aria-label="next track" class="button audio-btn" ng-click="next()"><svg plangular-icon="next"></svg></a></li>
+			</ul>
+		</div>
+		<div class="player-head">
+			<div class="twenty">
+				<img src="http://placehold.it/100x100" ng-src="{{ player.currentTrack.artwork_url  }}" alt="{{ player.currentTrack.title || '&nbsp;' }} by {{ player.currentTrack.user.username }}" />
+			</div>
+			<div class="eighty">
+				<h4>{{ player.currentTrack.title || '&nbsp;' }}</h4>
+				<progress ng-click="player.seek($event)" value="{{ player.currentTime / player.duration || 0 }}"></progress>
+				<!-- <img ng-src="{{ track.waveform_url }}" alt="waveform" /> -->
+				<p class="track-time">{{ player.currentTime | prettyTime }} - {{ player.duration | prettyTime }}</p>
+			</div>
+		</div>
+		<div class="player-body">
+
+		</div>
+
+		<ul class="track-list">
+			<li ng-repeat="t in tracks" ng-class="{ 'darken': player.currentTrack == t }">
+				<a ng-click="playPause($index)">
+					<span class="mr1">{{ $index + 1 }}.</span> {{ t.title }} <span class="right plays">{{ t.playback_count }} plays</span>
+				</a>
+			</li>
+		</ul>
+
+</div>

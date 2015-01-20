@@ -5,13 +5,6 @@
     <title>The Night Thief</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <script>
-    	window.addEventListener( 'load', function () {
-              setTimeout( function () {
-                  window.scrollTo( 0, 1 );
-              }, 0 );
-          });
-    </script>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -21,6 +14,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <!-- <base href="#/"> -->
   </head>
   <body ng-app="theNightThiefApp">
     <!--[if lt IE 7]>
@@ -31,17 +25,17 @@
       <div class="inner-wrap">
       	<nav class="tab-bar show-for-small">
       		<section class="left-small">
-      			<a class="left-off-canvas-toggle"><img class="nav-marker" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNyAzOC4yIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNyAzOC4yIj48cGF0aCBmaWxsPSIjRjlGQ0VBIiBkPSJNMy45IDE3LjFjLjQuMy43LjcuOSAxLjJsLS44LjguOC45Yy0uMi41LS41LjktLjkgMS4ybC0yLTIgMi0yLjF6bS45IDIuOWMuMi0uMy4yLS42LjItLjkgMC0uMyAwLS42LS4yLS44bC0uOC44LjguOXpNMCAxOS4xYzAgMS40IDEuMSAyLjUgMi41IDIuNS41IDAgMS0uMiAxLjQtLjVsLTItMiAyLTJjLS40LS4zLS45LS41LTEuNC0uNS0xLjQgMC0yLjUgMS4yLTIuNSAyLjV6bTIwLjYtNC42aC41Yy4zIDAgLjcgMCAxIC4xLjctMi44IDIuMS01LjMgMy45LTcuNUwyNC45IDZjLTIuMSAyLjQtMy42IDUuMy00LjMgOC41em0uNSA5LjNoLS41Yy44IDMuMiAyLjMgNi4xIDQuMyA4LjVsMS4xLTEuMWMtMS44LTIuMS0zLjItNC43LTMuOS03LjUtLjMuMS0uNy4xLTEgLjF6TTMuOSAyMS4ybDE3LjEgMTcgNi02LTEtMS01IDVMNC44IDIwYy0uMS41LS40LjktLjkgMS4yem0wLTQuMWMuNC4zLjcuNy45IDEuMkwyMSAyLjFsNSA1TDI3IDZsLTYtNkwzLjkgMTcuMXptNi4xIDJsMTQtMTQtMS0xLTE1LjEgMTVMMjMgMzQuMmwxLjEtMS4xLTE0LjEtMTR6bTEyLjEtNC41YzIuMS41IDMuNyAyLjMgMy43IDQuNiAwIDIuMi0xLjYgNC4xLTMuNyA0LjYtLjEtLjQtLjItLjgtLjMtMS4zIDEuNS0uMyAyLjYtMS43IDIuNi0zLjMgMC0xLjYtMS4xLTMtMi42LTMuMy4xLS41LjItLjkuMy0xLjN6bS0xLjUtLjFjLS4xLjQtLjIuOS0uMyAxLjQtMS41LjQtMi42IDEuNy0yLjYgMy4zIDAgMS42IDEuMSAyLjkgMi42IDMuMy4xLjUuMi45LjMgMS40LTIuMy0uMy00LjItMi4yLTQuMi00LjYgMC0yLjYgMS44LTQuNSA0LjItNC44em0wIDBjLS4xLjQtLjIuOS0uMyAxLjQuMy0uMS41LS4xLjgtLjEuMiAwIC41IDAgLjcuMS4xLS40LjItLjguMy0xLjMtLjMtLjEtLjctLjEtMS0uMWgtLjV6bS0uMyA3LjljLjEuNS4yLjkuMyAxLjRoLjVjLjMgMCAuNyAwIDEtLjEtLjEtLjQtLjItLjgtLjMtMS4zLS4yIDAtLjUuMS0uNy4xLS4zIDAtLjYgMC0uOC0uMXoiLz48L3N2Zz4=" alt="menu"></a>
-      		</section>
-      		<section class="middle tab-bar-section">
-      			<!-- <h1 class="title">The Night Thief</h1> -->
-
-      		<a href="#/">
-      			<svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.8 36" enable-background="new 0 0 232.8 36"><path d="M1.2 30.5h229.7c.5 0 .9.4.9.9V35c0 .5-.4.9-.9.9-12.8.1-157.8.8-230.4-1.3-.8 0-.4-2.2-.2-3.4.1-.4.5-.7.9-.7zM1.2 23.6h229.7c.5 0 .9.2.9.4v1.9c0 .2-.4.4-.9.4-12.8 0-157.8.4-230.4-.7-.8 0-.4-1.1-.2-1.7.1-.1.5-.3.9-.3zM7.2 5.6H1.9L3.3.5h16.6l-1.4 5.1h-5.3L9.7 18.5h-6L7.2 5.6zM21.1.5h6l-1.7 6.3h5.5L32.6.5h6l-4.8 18h-6l1.7-6.4H24l-1.7 6.4h-6l4.8-18zM40.6.5h15.3l-1.3 4.9h-9.4l-.5 1.8h8.8l-1.2 4.3h-8.8l-.5 2h9.6l-1.3 4.9H35.8L40.6.5zM64.4.5H70l4.1 8.6L76.4.5h6l-4.8 18h-5.3L68 9.6l-2.4 8.9h-6l4.8-18zM84.4.5h6l-4.8 18h-6l4.8-18zM99.3 18.9c-1.1.1-2.2-.1-3.3-.3-1.1-.3-2.1-.7-2.9-1.3-.9-.6-1.6-1.4-2.1-2.4-.6-1-.9-2.2-.9-3.6-.1-1.5.1-2.9.6-4.2.5-1.3 1.2-2.5 2.2-3.5 1-1 2.2-1.8 3.6-2.5 1.4-.6 3.1-1 4.9-1.1.9 0 1.7 0 2.5.1s1.5.3 2.2.6c.7.2 1.3.5 1.8.9s.9.7 1.3 1l-3.6 4c-.5-.5-1.2-.8-1.9-1.1-.7-.3-1.5-.4-2.3-.3-.9 0-1.6.2-2.3.5-.7.3-1.2.7-1.7 1.2-.4.5-.8 1.1-1 1.7s-.3 1.3-.3 2.1c0 .6.1 1 .3 1.4.2.4.5.7.8 1 .3.3.7.5 1.1.6s.9.2 1.3.1c.6 0 1.1-.1 1.6-.4l.5-2-3 .1.8-3.9 8.6-.4-2.1 9.3c-.9.6-1.9 1.1-3.1 1.5-1 .6-2.3.8-3.6.9zM112.5.5h6l-1.7 6.3h5.5L124 .5h6l-4.8 18h-6l1.7-6.4h-5.5l-1.7 6.4h-6l4.8-18zM135.2 5.6h-5.3l1.4-5.1h16.6l-1.4 5.1h-5.3l-3.5 12.9h-6l3.5-12.9zM158.9 5.6h-5.3L155 .5h16.6l-1.4 5.1h-5.3l-3.5 12.9h-6l3.5-12.9zM172.9.5h6l-1.7 6.3h5.5l1.7-6.3h6l-4.8 18h-6l1.7-6.4h-5.5l-1.7 6.4h-6l4.8-18zM192.4.5h6l-4.8 18h-6l4.8-18zM200.4.5h15.3l-1.3 4.9H205l-.5 1.8h8.8l-1.2 4.3h-8.8l-.5 2h9.6l-1.3 4.9h-15.5L200.4.5zM217.7.5h15.1l-1.4 5.1h-9l-.7 2.4h8.4l-1.3 4.7h-8.4l-1.6 5.9h-6L217.7.5z"/></svg>
+      			<a class="left-off-canvas-toggle">
+	      			<svg class="nav-marker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 38.2" enable-background="new 0 0 27 38.2"><defs><path class="st2" fill="#bcbdc0" id="menu-marker" d="M3.9 17.1c.4.3.7.7.9 1.2l-.8.8.8.9c-.2.5-.5.9-.9 1.2l-2-2 2-2.1zm.9 2.9c.2-.3.2-.6.2-.9 0-.3 0-.6-.2-.8l-.8.8.8.9zM0 19.1c0 1.4 1.1 2.5 2.5 2.5.5 0 1-.2 1.4-.5l-2-2 2-2c-.4-.3-.9-.5-1.4-.5-1.4 0-2.5 1.2-2.5 2.5zm20.6-4.6h.5c.3 0 .7 0 1 .1.7-2.8 2.1-5.3 3.9-7.5L24.9 6c-2.1 2.4-3.6 5.3-4.3 8.5zm.5 9.3h-.5c.8 3.2 2.3 6.1 4.3 8.5l1.1-1.1c-1.8-2.1-3.2-4.7-3.9-7.5-.3.1-.7.1-1 .1zM3.9 21.2l17.1 17 6-6-1-1-5 5L4.8 20c-.1.5-.4.9-.9 1.2zm0-4.1c.4.3.7.7.9 1.2L21 2.1l5 5L27 6l-6-6L3.9 17.1zm6.1 2l14-14-1-1-15.1 15L23 34.2l1.1-1.1-14.1-14zm12.1-4.5c2.1.5 3.7 2.3 3.7 4.6 0 2.2-1.6 4.1-3.7 4.6-.1-.4-.2-.8-.3-1.3 1.5-.3 2.6-1.7 2.6-3.3 0-1.6-1.1-3-2.6-3.3.1-.5.2-.9.3-1.3zm-1.5-.1c-.1.4-.2.9-.3 1.4-1.5.4-2.6 1.7-2.6 3.3 0 1.6 1.1 2.9 2.6 3.3.1.5.2.9.3 1.4-2.3-.3-4.2-2.2-4.2-4.6 0-2.6 1.8-4.5 4.2-4.8zm0 0c-.1.4-.2.9-.3 1.4.3-.1.5-.1.8-.1.2 0 .5 0 .7.1.1-.4.2-.8.3-1.3-.3-.1-.7-.1-1-.1h-.5zm-.3 7.9c.1.5.2.9.3 1.4h.5c.3 0 .7 0 1-.1-.1-.4-.2-.8-.3-1.3-.2 0-.5.1-.7.1-.3 0-.6 0-.8-.1z"></path></defs><use xlink:href="#menu-marker" transform="translate(0 0)"/></svg>
       			</a>
-      			</section>
+      		</section>
+	    		<section class="middle tab-bar-section">
+	      		<!-- <h1 class="title">The Night Thief</h1> -->
+	      		<a href="#/">
+	      			<svg class="logo right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.8 36" enable-background="new 0 0 232.8 36"><path d="M1.2 30.5h229.7c.5 0 .9.4.9.9V35c0 .5-.4.9-.9.9-12.8.1-157.8.8-230.4-1.3-.8 0-.4-2.2-.2-3.4.1-.4.5-.7.9-.7zM1.2 23.6h229.7c.5 0 .9.2.9.4v1.9c0 .2-.4.4-.9.4-12.8 0-157.8.4-230.4-.7-.8 0-.4-1.1-.2-1.7.1-.1.5-.3.9-.3zM7.2 5.6H1.9L3.3.5h16.6l-1.4 5.1h-5.3L9.7 18.5h-6L7.2 5.6zM21.1.5h6l-1.7 6.3h5.5L32.6.5h6l-4.8 18h-6l1.7-6.4H24l-1.7 6.4h-6l4.8-18zM40.6.5h15.3l-1.3 4.9h-9.4l-.5 1.8h8.8l-1.2 4.3h-8.8l-.5 2h9.6l-1.3 4.9H35.8L40.6.5zM64.4.5H70l4.1 8.6L76.4.5h6l-4.8 18h-5.3L68 9.6l-2.4 8.9h-6l4.8-18zM84.4.5h6l-4.8 18h-6l4.8-18zM99.3 18.9c-1.1.1-2.2-.1-3.3-.3-1.1-.3-2.1-.7-2.9-1.3-.9-.6-1.6-1.4-2.1-2.4-.6-1-.9-2.2-.9-3.6-.1-1.5.1-2.9.6-4.2.5-1.3 1.2-2.5 2.2-3.5 1-1 2.2-1.8 3.6-2.5 1.4-.6 3.1-1 4.9-1.1.9 0 1.7 0 2.5.1s1.5.3 2.2.6c.7.2 1.3.5 1.8.9s.9.7 1.3 1l-3.6 4c-.5-.5-1.2-.8-1.9-1.1-.7-.3-1.5-.4-2.3-.3-.9 0-1.6.2-2.3.5-.7.3-1.2.7-1.7 1.2-.4.5-.8 1.1-1 1.7s-.3 1.3-.3 2.1c0 .6.1 1 .3 1.4.2.4.5.7.8 1 .3.3.7.5 1.1.6s.9.2 1.3.1c.6 0 1.1-.1 1.6-.4l.5-2-3 .1.8-3.9 8.6-.4-2.1 9.3c-.9.6-1.9 1.1-3.1 1.5-1 .6-2.3.8-3.6.9zM112.5.5h6l-1.7 6.3h5.5L124 .5h6l-4.8 18h-6l1.7-6.4h-5.5l-1.7 6.4h-6l4.8-18zM135.2 5.6h-5.3l1.4-5.1h16.6l-1.4 5.1h-5.3l-3.5 12.9h-6l3.5-12.9zM158.9 5.6h-5.3L155 .5h16.6l-1.4 5.1h-5.3l-3.5 12.9h-6l3.5-12.9zM172.9.5h6l-1.7 6.3h5.5l1.7-6.3h6l-4.8 18h-6l1.7-6.4h-5.5l-1.7 6.4h-6l4.8-18zM192.4.5h6l-4.8 18h-6l4.8-18zM200.4.5h15.3l-1.3 4.9H205l-.5 1.8h8.8l-1.2 4.3h-8.8l-.5 2h9.6l-1.3 4.9h-15.5L200.4.5zM217.7.5h15.1l-1.4 5.1h-9l-.7 2.4h8.4l-1.3 4.7h-8.4l-1.6 5.9h-6L217.7.5z"/></svg>
+	    			</a>
+	  			</section>
       	</nav>
-
         <aside class="left-off-canvas-menu">
             <ul class="off-canvas-list" role="navigation" title="Page List">
                 <li role="menu-item"><a href="#/blog">blog</a></li>
@@ -56,41 +50,43 @@
                 <li role="menu-item"><a href="https://vimeo.com/thenightthiefband" target="_blank">vimeo</a></li>
             </ul>
         </aside>
+				<!-- TABLET & UP LEFT ALIGN MENU -->
+				<nav id="mainMenu" class="hide-for-small" data-top-bar>
+					<a href="#/">
+						<svg id="vert-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" enable-background="new 0 0 200 200">
+							<defs>
+								<path id="text" class="st0" d="M108.2 89.1c-2.7.2-5.2.4-7.8.5-.1-.2-.2-.5-.2-.7-.4-1.5-1-2-2.6-2-1.7 0-3.4.1-5.1.2l-4.5.3h-.1c-1.1-.8-2-.2-3.1.3-1.8.7-2.8 1.5-2.8 3.4 0 2.6.2 5.3.5 7.9.3 2.2 1.5 3.2 3.7 3.1 4-.1 7.9-.4 11.8-.7 2.2-.2 2.9-1.4 2.6-3.9-3.3.2-6.7.4-10.2.6-.1-1.9-.2-3.6-.4-5.4 6.2-.4 12.3-.8 18.5-1.2V81.1h5.3c2.8 0 2.8 0 2.8 2.8v5.8c0 .6 0 1 .8 1h16.7v-9.5h8.2v25.2c0 1.1-.2 1.6-1.4 1.5-2.2-.1-4.4 0-6.7 0V97.8h-17.5v9.1c0 .3-.4.9-.6.9-2.5.1-4.9 0-7.5 0v-3.9c-1.8 2.8-4.6 3.3-7.4 3.5-6.2.5-12.4.9-18.7 1-5.3.1-8.1-2.8-8.5-8-.2-3.1-.5-6.1-.6-9.2-.1-1.2 0-2.4.3-3.6.6-3.1 2.7-5 5.7-5.6 2.3-.5 4.7-.8 7.1-1 3.7-.3 7.4-.5 11.1-.7 1.5-.1 3 0 4.5.2 3.7.5 5.5 2.6 5.9 6.6.2.6.2 1.2.2 2zm60.6 59.1v-4.9H28.6v6.1l140.2-1.2zM61.5 81.1c-2.3 0-4.5.1-6.7 0-1 0-1.4.3-1.4 1.3.1 5.6 0 11.2 0 16.8 0 .4 0 .8-.1 1.5-.5-.5-.7-.8-1-1.1-2.4-3.1-4.9-6.1-7.3-9.2-.4-.5-.9-.9-1.2-1.4-1-1.4-1.7-3.1-3.9-3.1-.2 0-.4-.1-.9-.3.8-.2 1.3-.3 1.9-.5-.9-1.2-1.7-2.3-2.6-3.3-.4-.4-1-.8-1.6-.8-3.5-.1-7 0-10.4-.1-1.1 0-1.3.4-1.3 1.4v24.1c0 .4 0 .8.1 1.3h6.7c1 0 1.4-.3 1.4-1.3v-18c.6.3.9.6 1.2 1l13.8 17.4c.3.4.8.9 1.2.9 4 .1 8.1 0 12.2 0-.1-8.8-.1-17.6-.1-26.6zm83.1-14.6V61h-19.8v-4.4h21v-6h-29.1v26.6h29.7c0-1.7-.1-3.3 0-4.9.1-1.1-.3-1.4-1.4-1.4H124.8v-4.5c6.7.1 13.2.1 19.8.1zm-8.9 55.3c-5.8.1-11.5.1-17.3.2-.4 0-.8 0-1.2-.1-.9-.3-1-.8-.5-1.6.2-.3.4-.9.4-1.3-.2-1.3.4-1.5 1.5-1.5 6.1 0 12.2-.1 18.4-.1.4 0 .9 0 1.2-.1v-5.8h-29.1v26.6h29.8v-6.4h-1.4c-5.5.1-11 .2-16.4.2-1.2 0-2.4-.1-3.7-.1 0-1.3-.1-2.6-.1-3.9 0-.1.1-.1.2-.4h19.7V122c-.6-.2-1.1-.2-1.5-.2zm-65-9c.1-1.3-.4-1.6-1.6-1.5-1.6.1-3.1.1-4.7 0-1.7-.1-2 .5-2 2v23.5c0 .4 0 .8.1 1.3h7.4c.2 0 .7-.6.7-.9.1-1.7 0-3.4 0-5.2v-3.9h17.3c.7 1.5-.7 3.3 1 4.6-1.4 1.7-.5 3.6-.8 5.5h7.5c.2 0 .7-.6.7-.9v-24.8c0-.7-.2-1-1-1h-6.2c-.8 0-1 .3-1 1.1V121H70.6c0-2.9 0-5.6.1-8.2zm17.5-35.2c.2 0 .6-.6.6-.9.1-1.6 0-3.2 0-4.8v-4.3h17.6v10.1c2.3 0 4.6-.1 6.8 0 1.1 0 1.3-.3 1.3-1.4V52.2c0-.4-.1-.8-.1-1.3h-8.1v9.5H89.5c-.2 0-.7-.6-.7-.9-.1-2.2 0-4.4 0-6.6 0-2.3.2-2-2-2h-6.1v26.8c2.5 0 5 0 7.5-.1zm60.1 41.3c-.1-1 .4-1.3 1.3-1.3 3.4.1 6.8 0 10.2 0 .5 0 1.1-.3 1.6-.3 2.2.1 4.4.2 6.7.4v-6.4c-.4 0-.7-.1-1.1-.1h-25.7c-1 0-1.2.3-1.2 1.2v24.5c0 .3 0 .6.1 1.1h7.6c.2 0 .5-.6.5-.9.1-1.4 0-2.7 0-4.1v-4.2h18.8v-6.1h-18.8c0-1.3.1-2.5 0-3.8zm7.1-27.9v15.8c0 .3.4.8.6.8 2.5.1 4.9 0 7.6 0V87.4h11.5v-6.5h-31.2v6.5c.6 0 1.1.1 1.6 0 .3 0 .8-.5.9-.4 1.2 1 2.7.3 4 .4 1.6.1 3.3 0 4.7 0 .4 1 .7 1.7 1 2.5-.3.3-.7.7-.7 1.1zM79.6 50.9H49.4c-.4 0-1 .3-1 .4-.1 2 0 4 0 6.1h10.3c1.1 0 1.4.3 1.3 1.3-.1 5.8 0 11.6 0 17.4v1.4h8.2V57.4h11.5c-.1-2.2-.1-4.3-.1-6.5zm-18.1 67.2v-4.5c.1-1.9 0-2-1.9-2-9.4-.2-18.8-.3-28.2-.5h-1.3v6.7h11.3v20.3h8.1v-20h12zm9.1-10.2c1.1 0 1.4-.3 1.4-1.4V81.2h-8.1v26.7h6.7zm36.1 3.8c0-.1-.4-.4-.6-.4h-6.8c-.2 0-.4.3-.8.5.6.2 1 .3 1.7.6-.7.3-1.1.5-1.4.7V138h8c0-.3.1-.5.1-.7v-23.5c0-.4-.2-.8-.4-1.3-.1-.1.1-.4.2-.8z"/>
 
+								<path id="black-dots" class="st1" d="M68.2 147.3c-.4.3-.6.7-.8.7-.3 0-.7-.4-.7-.5.1-.3.4-.6.6-.9.3.1.5.3.9.7zm-5.4.2c-.5-.1-1-.1-1.4-.1-.1 0-.2.4-.3.5.4 0 .9.1 1.3.1.1 0 .3-.1.4-.1v-.4zm-2.2-58.2c0-.1-1-.1-1.1.1-.3.8 0 1.4 1.3 1.9 0-.8 0-1.4-.2-2zm-5.2-1.5c-.2 0-.5.4-.7.6.4.3.7.7 1.1.9.2.1.5-.2 1.1-.6-.8-.5-1.1-.8-1.5-.9zm-28.3 3.4c-.3-.2-.7-.5-1-.5-.3.1-.6.5-.9.8.3.2.6.6.9.7.2.1.5-.3.8-.5 0-.2.1-.3.2-.5zm92.8 22.9c0-.3-.7-1-1-.9-.5.1-.9.6-1.1 1.1-.1.2.5.7 1 1.4.6-.7 1.1-1.1 1.1-1.6zM115 112c-.4.2-.8.2-1.1.5-.1.1.1.7.3.9.1.2.7.2.7.2.2-.4.3-.9.4-1.3l-.3-.3zm-3.8 12.6s-.5.4-.5.5c.2.3.5.7.8.9.1 0 .4-.2.7-.5-.4-.3-.7-.6-1-.9zm-42.4-6.1c-.3.2-.7.5-.8.9-.1.2.3.5.5.8.4-.3.7-.6 1.3-1.1-.5-.3-.8-.7-1-.6zm21.9-1.1h-1.5c-.1.1-.1.2-.2.3.3.3.6.7.9.7.3 0 .6-.5.9-.7 0 0 0-.1-.1-.3zm70.9-2.5c-.2-.3-.5-.7-.7-1-.3.2-.5.4-.8.6.3.3.7.5 1 .8.2-.1.4-.3.5-.4zm-12.4 1.4c.2-.4.4-.9.6-1.3l-.6-.3c-.2.4-.4.9-.6 1.3.1.1.4.2.6.3zm-110.9-2.7c-.1-.3-.4-.8-.8-.9-.3-.1-.6.3-1 .5.3.4.6.8 1.1 1.5.5-.6.8-.9.7-1.1zm.8 3.1c-.1-.4-.2-.9-.4-1-.3-.2-.7 0-1.1 0 0 .1-.1.3-.1.4.5.3.9.6 1.4.9.1-.2.1-.3.2-.3zm60.8 11.9c-.1.2.5.8.7.8.8.1 1.3-.5 1.4-1.3 0-.3-.5-.6-1-1.1-.4.7-.9 1.1-1.1 1.6zm3.2-10.3c.2 0 .5-.4.7-.6-.5-.4-1-.8-1.5-1.1-.3 1.1 0 1.7.8 1.7zm-1.7 5.4c.3-.1.5-.5.9-1H100c.1 1 .7 1.2 1.4 1z"/>
+							</defs>
+							<use xlink:href="#text" transform="translate(0 0)"/>
+							<use xlink:href="#black-dots" transform="translate(0 0)"/>
+						</svg>
+					</a>
+					<section class="nav-items">
+						<ul class="side-nav" role="navigation" title="Page List">
+								<li role="menu-item"><a href="#/blog">blog</a></li>
+								<li role="menu-item"><a href="#/audio">audio</a></li>
+				        <li role="menu-item"><a href="#/film">film</a></li>
+				        <li role="menu-item"><a href="#/contact">contact</a></li>
+				        <li role="menu-item"><a href="https://www.facebook.com/thenightthiefofficial" target="_blank">facebook</a></li>
+				        <li role="menu-item"><a href="https://soundcloud.com/thenightthief" target="_blank">soundcloud</a></li>
+				        <li role="menu-item"><a href="https://twitter.com/nightthiefband" target="_blank">twitter</a></li>
+				        <li role="menu-item"><a href="https://thenightthief.bandcamp.com/" target="_blank">bandcamp</a></li>
+				        <li role="menu-item"><a href="https://vimeo.com/thenightthiefband" target="_blank">vimeo</a></li>
+						</ul>
+					</section>
+				</nav>
+				<div class="content">
+					<div class="content-inner row" ng-view=""></div>
+				</div>
+				<a class="exit-off-canvas"></a>
+			</div>
 
-            <!-- TABLET & UP LEFT ALIGN MENU -->
-            <nav id="mainMenu" class="hide-for-small" data-top-bar>
-            		<a href="#/">
-            		<img class="logo" src="data:image/svg+xml;base64,PHN2ZyBjbGFzcz0ibG9nbyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNjAgNTIuOSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNjAgNTIuOSIgZmlsbD0iI2Y5ZmNlYSI+PGNpcmNsZSBjeD0iNTAuNyIgY3k9IjEyLjgiIHI9Ii40Ii8+PHBhdGggZD0iTTQ1LjUgMTYuMmwtLjItLjJjLS4zLjEtLjYuMS0xIC4xLTEuNSAwLTIuOC0xLTMuMi0yLjV2LS4ySDQwLjh2LjJjLjQgMS41IDEuOCAyLjcgMy40IDIuNy41LjEuOSAwIDEuMy0uMXptMi0yLjh2LjJjLS4xLjUtLjQuOS0uNyAxLjNsLjIuMmMuNC0uNC42LS45LjgtMS41di0uMkg0Ny41em0uMi0xLjF2LS4yYy0uMS0uNi0uNC0xLjEtLjgtMS41bC0uMi4yYy4zLjQuNi44LjcgMS4zdi4yaC4xYy4xLS4xLjIgMCAuMiAwem0tNi42IDB2LS4yYy40LTEuNCAxLjYtMi41IDMuMi0yLjUuMyAwIC43LjEgMSAuMWwuMi0uMmMtLjQtLjEtLjgtLjItMS4yLS4yLTEuNyAwLTMgMS4xLTMuNCAyLjd2LjJoLjFzMCAuMS4xLjF6bTYuNSAzLjhoLTIuMW0wIC4xaDIuMWwtLjMtLjNoLTEuOHYuM3ptLTEuMi0zLjRsMi4xLTIuMS41LS41LjIuMi0uNS41LTEuOSAxLjkgMi41IDIuNS0uMi4yLTIuNy0yLjd6bTMtMi42bC0uMi0uMi41LS41IDMuNCAzLjQtMy40IDMuNC0uNS0uNS4yLS4yLjMuMyAzLTMtMy0zLS4zLjN6bS4zLS42aC0yLjFtMCAuMWgxLjhsLjMtLjNoLTIuMXYuM3ptLTIuMyAzLjFsMi42LTIuNi40LS40aC40bC0uNi42LTIuNSAyLjUgMyAzIC4xLjFoLS40bC0zLTMuMnptMy45LTIuNGwuMi0uMiAyLjYgMi42LTIuNiAyLjYtLjItLjIgMi41LTIuNS0yLjUtMi4zem0wIDUuM2wuMi0uMi0uMi0uMi0uMi4yLjIuMnptMC01LjNsLjItLjItLjItLjItLjIuMi4yLjJ6bS0xLjYgNS44bC4xLS4zLS4xLS4xLTMtMyAzLjEtMy4xLS4yLS4yLTMuNCAzLjQgMy41IDMuM3ptMi4yLTIuNWMuNCAwIC43LS40LjctLjhzLS4zLS44LS43LS44SDQ3LjRjLS40LjEtLjYuNC0uNi44cy4zLjcuNi44aC4zYy0uMSAwIDAgMCAwIDB6bS0uNy0uOWMwLS4zLjItLjUuNS0uNmguMmMuMy4xLjUuMy41LjZzLS4yLjUtLjUuNmgtLjJjLS4zIDAtLjUtLjMtLjUtLjZ6bS01LjkuOGMuNC0uMS42LS40LjYtLjhzLS4zLS43LS42LS44SDQwLjhjLS40IDAtLjguNC0uOC44cy4zLjguOC44aC4xYy4xLjEuMi4xLjIgMHptLS44LS44YzAtLjMuMi0uNS41LS42SDQxLjFjLjMuMS40LjMuNC42cy0uMi41LS40LjZINDAuOGMtLjMgMC0uNS0uMy0uNS0uNnoiLz48Y2lyY2xlIGN4PSIzMS4xIiBjeT0iMTIuOCIgcj0iLjQiLz48cGF0aCBkPSJNMzYuNCA5LjVsLjIuMmMuMy0uMS42LS4xIDEtLjEgMS41IDAgMi44IDEgMy4yIDIuNXYuMkg0MS4xdi0uMmMtLjQtMS41LTEuOC0yLjctMy40LTIuNy0uNS0uMS0uOSAwLTEuMy4xem0tMiAyLjh2LS4yYy4xLS41LjQtLjkuNy0xLjNsLS4yLS4yYy0uNC40LS42LjktLjggMS41di4yaC4xYy4xLS4xLjEgMCAuMiAwem0tLjMgMS4xdi4yYy4xLjYuNCAxLjEuOCAxLjVsLjItLjJjLS4zLS40LS42LS44LS43LTEuM3YtLjJIMzQuMXptNi43IDB2LjJjLS40IDEuNC0xLjYgMi41LTMuMiAyLjUtLjMgMC0uNy0uMS0xLS4xbC0uMi4yYy40LjEuOC4yIDEuMi4yIDEuNyAwIDMtMS4xIDMuNC0yLjd2LS4yaC0uMWMwLS4xLS4xLS4xLS4xLS4xem0tNi42LTMuOGgyLjFtMC0uMWgtMi4xbC4zLjNoMS44di0uM3ptMS4zIDMuM0wzNS41IDE1bC0uNS41LS4yLS4yLjUtLjUgMS45LTEuOS0yLjUtMi41LjItLjIgMi43IDIuNnptLTMgMi43bC4yLjItLjUuNS0zLjQtMy40IDMuNC0zLjQuNS41LS4yLjItLjMtLjMtMyAzIDMgMyAuMy0uM3ptLS40LjZoMi4xbTAtLjJoLTEuOGwtLjMuM2gyLjF2LS4zem0yLjQtMy4xTDM2IDE1LjVsLS40LjRoLS40bC42LS42IDIuNS0yLjUtMy0zLS4xLS4xaC40bDMuMSAzLjF6bS0zLjkgMi41bC0uMi4yLTIuNi0yLjYgMi42LTIuNi4yLjItMi41IDIuNSAyLjUgMi4zem0wLTUuM2wtLjIuMi4yLjIuMi0uMi0uMi0uMnptMCA1LjNsLS4yLjIuMi4yLjItLjItLjItLjJ6bTEuNS01LjhsLS4xLjMuMS4xIDMgMy0zLjEgMy4xLjIuMiAzLjQtMy40LTMuNS0zLjN6TTM0LjIgMTJjLS40IDAtLjcuNC0uNy44cy4zLjguNy44SDM0LjVjLjQtLjEuNi0uNC42LS44cy0uMy0uNy0uNi0uOGgtLjN6bS42LjhjMCAuMy0uMi41LS41LjZoLS4yYy0uMy0uMS0uNS0uMy0uNS0uNnMuMi0uNS41LS42aC4yYy4zLjEuNS40LjUuNnptNS45LS44Yy0uNC4xLS42LjQtLjYuOHMuMy43LjYuOEg0MWMuNCAwIC44LS40LjgtLjhzLS40LS43LS44LS44SDQwLjd6bS44LjhjMCAuMy0uMi41LS41LjZINDAuN2MtLjMtLjEtLjQtLjMtLjQtLjZzLjItLjUuNC0uNkg0MWMuMy4xLjUuNC41LjZ6TS4zIDUwLjFoNTkuNGMuMSAwIC4yLjIuMi40djEuOWMwIC4yLS4xLjQtLjIuNC0zLjMgMC00MC45LjQtNTkuNi0uNy0uMiAwLS4xLTEuMSAwLTEuNyAwLS4yLjEtLjMuMi0uM3pNLjMgNDcuNmg1OS40Yy4xIDAgLjIuMS4yLjJ2MWMwIC4xLS4xLjItLjIuMi0zLjMgMC00MC45LjItNTkuNi0uMy0uMiAwLS4xLS42IDAtLjkgMC0uMS4xLS4yLjItLjJ6TTU5LjcgMi44SC4yYy0uMSAwLS4yLS4yLS4yLS40Vi41QzAgLjMuMS4xLjIuMWMzLjMgMCA0MC45LS40IDU5LjYuNy4yIDAgLjEgMS4xIDAgMS43LjEuMiAwIC4zLS4xLjN6TTU5LjcgNS4zSC4yYy0uMSAwLS4yLS4xLS4yLS4ydi0xYzAtLjEuMS0uMi4yLS4yIDMuMyAwIDQwLjktLjIgNTkuNi4zLjIgMCAuMS42IDAgLjkuMS4xIDAgLjItLjEuMnpNMi44IDExLjNILjdsLjUtMmg2LjVsLS41IDJoLTJsLTEuNCA1LjFIMS41bDEuMy01LjF6TTguOCA5LjNoMi40bC0uNyAyLjVoMi4ybC43LTIuNWgyLjRsLTEuOSA3aC0yLjRsLjctMi41SDkuOWwtLjcgMi41SDYuOWwxLjktN3pNMTYuOSA5LjNoNmwtLjUgMS45aC0zLjdsLS4yLjhoMy40bC0uNSAxLjdIMThsLS4yLjhoMy43bC0uNSAxLjloLTZsMS45LTcuMXpNNCAxOC43aDMuNUwxMCAyNGwxLjQtNS4zaDMuN2wtMyAxMS4xSDguOGwtMi42LTUuNS0xLjUgNS41SDFsMy0xMS4xek0xNy45IDE4LjdoMy43bC0zIDExLjFoLTMuN2wzLTExLjF6TTI3LjcgMzBjLS43IDAtMS40IDAtMi0uMi0uNy0uMS0xLjMtLjQtMS44LS44cy0xLS44LTEuMy0xLjVjLS40LS42LS42LTEuMy0uNi0yLjItLjEtLjkuMS0xLjguMy0yLjZzLjctMS42IDEuMy0yLjJjLjYtLjYgMS4zLTEuMiAyLjItMS42LjktLjQgMS45LS42IDMtLjcuNSAwIDEgMCAxLjUuMXMuOS4yIDEuMy4zYy40LjEuOC4zIDEuMS41cy42LjQuOC42bC0yLjIgMi41Yy0uMy0uMy0uNy0uNS0xLjItLjZzLS45LS4yLTEuNC0uMmMtLjUgMC0xIC4xLTEuNC4zLS40LjItLjcuNC0xIC44cy0uNS43LS42IDEuMWMtLjEuNC0uMi44LS4xIDEuMyAwIC4zLjEuNi4yLjkuMS4yLjMuNC41LjZzLjQuMy43LjNjLjMuMS41LjEuOC4xLjQgMCAuNy0uMSAxLS4ybC4zLTEuMi0xLjguMS40LTIuNCA1LjMtLjMtMS4yIDUuN2MtLjUuNC0xLjIuNy0xLjkuOS0uNi40LTEuNC42LTIuMi42ek0zNS45IDE4LjdoMy43bC0xLjEgMy45aDMuNGwxLjEtMy45aDMuN2wtMyAxMS4xSDQwbDEuMS00aC0zLjRsLTEuMSA0aC0zLjdsMy0xMS4xek01MS4yIDIyaC0zLjNsLjgtMy4xSDU5bC0uOSAzLjFoLTMuM2wtMi4xIDhINDlsMi4yLTh6TTQuNCAzNi4zSDEuMmwuOC0zLjJoMTAuMmwtLjggMy4xSDguMWwtMi4xIDhIMi4zbDIuMS03Ljl6TTE0LjEgMzMuMWgzLjdsLTEgMy45aDMuNGwxLjEtMy45SDI1bC0zIDExLjFoLTMuN2wxLjEtNEgxNmwtMS4xIDRoLTMuN2wyLjktMTEuMXpNMjcuNyAzMy4xaDMuN2wtMyAxMS4xaC0zLjdsMy0xMS4xek0zNCAzM2g5LjRsLS44IDNoLTUuOGwtLjMgMS4xSDQybC0uNyAyLjdoLTUuNGwtLjMgMS4yaDUuOWwtLjggM2gtOS41TDM0IDMzek00NS45IDMzLjJoOS4zbC0uOSAzLjJoLTUuNmwtLjQgMS40aDUuMmwtLjggMi45aC01LjJsLTEgMy42aC0zLjdsMy4xLTExLjF6Ii8+PC9zdmc+" alt=""/>
-            			<!-- <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 52.9" enable-background="new 0 0 60 52.9"><circle cx="50.7" cy="12.8" r=".4"/><path d="M45.5 16.2l-.2-.2c-.3.1-.6.1-1 .1-1.5 0-2.8-1-3.2-2.5v-.2H40.8v.2c.4 1.5 1.8 2.7 3.4 2.7.5.1.9 0 1.3-.1zm2-2.8v.2c-.1.5-.4.9-.7 1.3l.2.2c.4-.4.6-.9.8-1.5v-.2H47.5zm.2-1.1v-.2c-.1-.6-.4-1.1-.8-1.5l-.2.2c.3.4.6.8.7 1.3v.2h.1c.1-.1.2 0 .2 0zm-6.6 0v-.2c.4-1.4 1.6-2.5 3.2-2.5.3 0 .7.1 1 .1l.2-.2c-.4-.1-.8-.2-1.2-.2-1.7 0-3 1.1-3.4 2.7v.2h.1s0 .1.1.1zm6.5 3.8h-2.1m0 .1h2.1l-.3-.3h-1.8v.3zm-1.2-3.4l2.1-2.1.5-.5.2.2-.5.5-1.9 1.9 2.5 2.5-.2.2-2.7-2.7zm3-2.6l-.2-.2.5-.5 3.4 3.4-3.4 3.4-.5-.5.2-.2.3.3 3-3-3-3-.3.3zm.3-.6h-2.1m0 .1h1.8l.3-.3h-2.1v.3zm-2.3 3.1l2.6-2.6.4-.4h.4l-.6.6-2.5 2.5 3 3 .1.1h-.4l-3-3.2zm3.9-2.4l.2-.2 2.6 2.6-2.6 2.6-.2-.2 2.5-2.5-2.5-2.3zm0 5.3l.2-.2-.2-.2-.2.2.2.2zm0-5.3l.2-.2-.2-.2-.2.2.2.2zm-1.6 5.8l.1-.3-.1-.1-3-3 3.1-3.1-.2-.2-3.4 3.4 3.5 3.3zm2.2-2.5c.4 0 .7-.4.7-.8s-.3-.8-.7-.8H47.4c-.4.1-.6.4-.6.8s.3.7.6.8h.3c-.1 0 0 0 0 0zm-.7-.9c0-.3.2-.5.5-.6h.2c.3.1.5.3.5.6s-.2.5-.5.6h-.2c-.3 0-.5-.3-.5-.6zm-5.9.8c.4-.1.6-.4.6-.8s-.3-.7-.6-.8H40.8c-.4 0-.8.4-.8.8s.3.8.8.8h.1c.1.1.2.1.2 0zm-.8-.8c0-.3.2-.5.5-.6H41.1c.3.1.4.3.4.6s-.2.5-.4.6H40.8c-.3 0-.5-.3-.5-.6z"/><circle cx="31.1" cy="12.8" r=".4"/><path d="M36.4 9.5l.2.2c.3-.1.6-.1 1-.1 1.5 0 2.8 1 3.2 2.5v.2H41.1v-.2c-.4-1.5-1.8-2.7-3.4-2.7-.5-.1-.9 0-1.3.1zm-2 2.8v-.2c.1-.5.4-.9.7-1.3l-.2-.2c-.4.4-.6.9-.8 1.5v.2h.1c.1-.1.1 0 .2 0zm-.3 1.1v.2c.1.6.4 1.1.8 1.5l.2-.2c-.3-.4-.6-.8-.7-1.3v-.2H34.1zm6.7 0v.2c-.4 1.4-1.6 2.5-3.2 2.5-.3 0-.7-.1-1-.1l-.2.2c.4.1.8.2 1.2.2 1.7 0 3-1.1 3.4-2.7v-.2h-.1c0-.1-.1-.1-.1-.1zm-6.6-3.8h2.1m0-.1h-2.1l.3.3h1.8v-.3zm1.3 3.3L35.5 15l-.5.5-.2-.2.5-.5 1.9-1.9-2.5-2.5.2-.2 2.7 2.6zm-3 2.7l.2.2-.5.5-3.4-3.4 3.4-3.4.5.5-.2.2-.3-.3-3 3 3 3 .3-.3zm-.4.6h2.1m0-.2h-1.8l-.3.3h2.1v-.3zm2.4-3.1L36 15.5l-.4.4h-.4l.6-.6 2.5-2.5-3-3-.1-.1h.4l3.1 3.1zm-3.9 2.5l-.2.2-2.6-2.6 2.6-2.6.2.2-2.5 2.5 2.5 2.3zm0-5.3l-.2.2.2.2.2-.2-.2-.2zm0 5.3l-.2.2.2.2.2-.2-.2-.2zm1.5-5.8l-.1.3.1.1 3 3-3.1 3.1.2.2 3.4-3.4-3.5-3.3zM34.2 12c-.4 0-.7.4-.7.8s.3.8.7.8H34.5c.4-.1.6-.4.6-.8s-.3-.7-.6-.8h-.3zm.6.8c0 .3-.2.5-.5.6h-.2c-.3-.1-.5-.3-.5-.6s.2-.5.5-.6h.2c.3.1.5.4.5.6zm5.9-.8c-.4.1-.6.4-.6.8s.3.7.6.8H41c.4 0 .8-.4.8-.8s-.4-.7-.8-.8H40.7zm.8.8c0 .3-.2.5-.5.6H40.7c-.3-.1-.4-.3-.4-.6s.2-.5.4-.6H41c.3.1.5.4.5.6zM.3 50.1h59.4c.1 0 .2.2.2.4v1.9c0 .2-.1.4-.2.4-3.3 0-40.9.4-59.6-.7-.2 0-.1-1.1 0-1.7 0-.2.1-.3.2-.3zM.3 47.6h59.4c.1 0 .2.1.2.2v1c0 .1-.1.2-.2.2-3.3 0-40.9.2-59.6-.3-.2 0-.1-.6 0-.9 0-.1.1-.2.2-.2zM59.7 2.8H.2c-.1 0-.2-.2-.2-.4V.5C0 .3.1.1.2.1c3.3 0 40.9-.4 59.6.7.2 0 .1 1.1 0 1.7.1.2 0 .3-.1.3zM59.7 5.3H.2c-.1 0-.2-.1-.2-.2v-1c0-.1.1-.2.2-.2 3.3 0 40.9-.2 59.6.3.2 0 .1.6 0 .9.1.1 0 .2-.1.2zM2.8 11.3H.7l.5-2h6.5l-.5 2h-2l-1.4 5.1H1.5l1.3-5.1zM8.8 9.3h2.4l-.7 2.5h2.2l.7-2.5h2.4l-1.9 7h-2.4l.7-2.5H9.9l-.7 2.5H6.9l1.9-7zM16.9 9.3h6l-.5 1.9h-3.7l-.2.8h3.4l-.5 1.7H18l-.2.8h3.7l-.5 1.9h-6l1.9-7.1zM4 18.7h3.5L10 24l1.4-5.3h3.7l-3 11.1H8.8l-2.6-5.5-1.5 5.5H1l3-11.1zM17.9 18.7h3.7l-3 11.1h-3.7l3-11.1zM27.7 30c-.7 0-1.4 0-2-.2-.7-.1-1.3-.4-1.8-.8s-1-.8-1.3-1.5c-.4-.6-.6-1.3-.6-2.2-.1-.9.1-1.8.3-2.6s.7-1.6 1.3-2.2c.6-.6 1.3-1.2 2.2-1.6.9-.4 1.9-.6 3-.7.5 0 1 0 1.5.1s.9.2 1.3.3c.4.1.8.3 1.1.5s.6.4.8.6l-2.2 2.5c-.3-.3-.7-.5-1.2-.6s-.9-.2-1.4-.2c-.5 0-1 .1-1.4.3-.4.2-.7.4-1 .8s-.5.7-.6 1.1c-.1.4-.2.8-.1 1.3 0 .3.1.6.2.9.1.2.3.4.5.6s.4.3.7.3c.3.1.5.1.8.1.4 0 .7-.1 1-.2l.3-1.2-1.8.1.4-2.4 5.3-.3-1.2 5.7c-.5.4-1.2.7-1.9.9-.6.4-1.4.6-2.2.6zM35.9 18.7h3.7l-1.1 3.9h3.4l1.1-3.9h3.7l-3 11.1H40l1.1-4h-3.4l-1.1 4h-3.7l3-11.1zM51.2 22h-3.3l.8-3.1H59l-.9 3.1h-3.3l-2.1 8H49l2.2-8zM4.4 36.3H1.2l.8-3.2h10.2l-.8 3.1H8.1l-2.1 8H2.3l2.1-7.9zM14.1 33.1h3.7l-1 3.9h3.4l1.1-3.9H25l-3 11.1h-3.7l1.1-4H16l-1.1 4h-3.7l2.9-11.1zM27.7 33.1h3.7l-3 11.1h-3.7l3-11.1zM34 33h9.4l-.8 3h-5.8l-.3 1.1H42l-.7 2.7h-5.4l-.3 1.2h5.9l-.8 3h-9.5L34 33zM45.9 33.2h9.3l-.9 3.2h-5.6l-.4 1.4h5.2l-.8 2.9h-5.2l-1 3.6h-3.7l3.1-11.1z"/></svg> -->
-            		</a>
-            	<section class="nav-items">
-            		<ul class="side-nav" role="navigation" title="Page List">
-            				<li role="menu-item"><a href="#/blog">blog</a></li>
-            				<li role="menu-item"><a href="#/audio">audio</a></li>
-                    <li role="menu-item"><a href="#/film">film</a></li>
-                    <li role="menu-item"><a href="#/contact">contact</a></li>
-                    <li role="menu-item"><a href="https://www.facebook.com/thenightthiefofficial" target="_blank">facebook</a></li>
-                    <li role="menu-item"><a href="https://soundcloud.com/thenightthief" target="_blank">soundcloud</a></li>
-                    <li role="menu-item"><a href="https://twitter.com/nightthiefband" target="_blank">twitter</a></li>
-                    <li role="menu-item"><a href="https://thenightthief.bandcamp.com/" target="_blank">bandcamp</a></li>
-                    <li role="menu-item"><a href="https://vimeo.com/thenightthiefband" target="_blank">vimeo</a></li>
-            		</ul>
-            	</section>
-            </nav>
+			<div class="audio-player">
 
+			</div>
 
-								<div class="content">
-									<div class="content-inner row" ng-view=""></div>
-								</div>
-
-
-
-
-            <a class="exit-off-canvas"></a>
-
-
-       </div>
      </div>
 
 

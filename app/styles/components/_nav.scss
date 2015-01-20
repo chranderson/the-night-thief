@@ -12,10 +12,13 @@
 }
 
 .nav-marker {
-	height:30px;
-	width:21px;
-	margin-top:5px;
-	margin-left:13px;
+	height:100%;
+	width:100%;
+	// margin-top:5px;
+	// margin-left:13px;
+	padding:8px;
+	// background:blue;
+	fill: $gray;
 	// -webkit-transform:rotate(-90deg);
 }
 
@@ -34,9 +37,12 @@ ul.off-canvas-list li a {
 	padding-left:1.5em;
 }
 
+ul.side-nav {
+	padding:0;
+}
 ul.side-nav li a:not(.button) {
 
-	color: $white;
+	color: $gray;
 	@media #{$medium-up} {
 		padding:1em 0;
 		padding-right:1.5em;
@@ -75,12 +81,39 @@ nav#mainMenu {
 	display:block;
 	margin:0 auto;
 	margin-top:4px;
-	fill: $black;
-	fill: $red;
-	fill: $white;
+	// fill: $black;
+	// fill: $red;
+	fill: $gray;
 	// opacity: 0.7;
 
 	@media #{$medium-up} {width:100px;height:120px;}
 	@media #{$large-up} {width:140px;height:160px;}
 	@media #{$xlarge-up} {}
+}
+
+svg#tnt-logo-vert {
+	width:100%;
+}
+#tnt-logo-vert {
+	display:block;
+	margin:0 auto;
+	@media #{$medium-up} {}
+	@media #{$large-up} {}
+	@media #{$xlarge-up} {}
+}
+
+
+.st0, .st2 {
+	fill: $gray;
+}
+.st1 {
+	fill: $black;
+}
+
+.st10 {
+	fill:$red;
+}
+.st11 {
+	fill: $red;
+	opacity: .4;
 }
