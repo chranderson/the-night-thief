@@ -1,24 +1,24 @@
 <header>
-	<h1>Audio Page</h1>
-	<p>list of songs to play globally</p>
+	<h1>Tracks</h1>
+	<p>choose a song, ya ding dong!</p>
 </header>
 
-<div plangular class="player-wrap">
-		<div class="player-head">
+<!-- <div plangular class="player-wrap"> -->
+		<!-- <div class="player-head">
 			<div class="twenty">
 				<img src="http://placehold.it/100x100" ng-src="{{ player.currentTrack.artwork_url  }}" alt="{{ player.currentTrack.title || '&nbsp;' }} by {{ player.currentTrack.user.username }}" />
-			</div>
-			<div class="eighty">
-				<h4>{{ player.currentTrack.title || '&nbsp;' }}</h4>
+			</div> -->
+			<!-- <div class="eighty"> -->
+				<!-- <h4>{{ player.currentTrack.title || '&nbsp;' }}</h4> -->
 				<!-- <progress value="{{ player.currentTime / player.duration || 0 }}" ng-click="player.seek($event)">
 					{{ player.currentTime / duration }}
 				</progress> -->
 				<!-- <img ng-src="{{ track.waveform_url }}" alt="waveform" /> -->
-				<p class="track-time">{{ player.currentTime | prettyTime }} - {{ t.duration | prettyTime }}</p>
-			</div>
+				<!-- <p class="track-time">{{ player.currentTime | prettyTime }} - {{ t.duration | prettyTime }}</p> -->
+			<!-- </div> -->
 
 
-			<div class="player-control">
+			<!-- <div class="player-control">
 				<ul class="button-group even-3">
 					<li><a role="button" aria-label="previous track" class="button audio-btn" ng-click="previous()"><svg plangular-icon="previous"></svg></a></li>
 					<li>
@@ -29,49 +29,26 @@
 					</li>
 					<li><a role="button" aria-label="next track" class="button audio-btn" ng-click="next()"><svg plangular-icon="next"></svg></a></li>
 				</ul>
-			</div>
+			</div> -->
 
-			<progress value="{{ player.currentTime / player.duration || 0 }}" ng-click="player.seek($event)">
+			<!-- <progress value="{{ player.currentTime / player.duration || 0 }}" ng-click="player.seek($event)">
 					{{ player.currentTime / duration }}
-				</progress>
-		</div>
+				</progress> -->
+		<!-- </div>
 		<div class="player-body">
-		</div>
+		</div> -->
 
 
-		<ul class="track-list">
-			<li plangular="https://soundcloud.com/thenightthief/my-love-is-whole" ng-class="{ 'darken': player.playing == track }">
+		<ul plangular class="track-list">
+			<li ng-repeat="track in tracks" plangular="{{ track }}" ng-class="{ 'darken': player.playing == track }">
 				<a ng-click="playPause($index)">
 					<span class="mr1">
 						<img src="http://placehold.it/100x100/000000" ng-src="{{ player.currentTrack.artwork_url  }}" alt="{{ title || '&nbsp;' }} by {{ player.currentTrack.user.username }}" />
 					</span>
-					{{ title }}<br>
-				</a>
-			</li>
-			<li plangular="https://soundcloud.com/thenightthief/sunblind" ng-class="{ 'darken': player.playing == track }">
-				<a ng-click="playPause($index)">
-					<span class="mr1">
-						<img src="http://placehold.it/100x100/000000" ng-src="{{ player.currentTrack.artwork_url  }}" alt="{{ player.currentTrack.title || '&nbsp;' }} by {{ player.currentTrack.user.username }}" />
-					</span>
-					{{ title }}
-				</a>
-			</li>
-			<li plangular="https://soundcloud.com/thenightthief/everweare" ng-class="{ 'darken': player.playing == track }">
-				<a ng-click="playPause($index)">
-					<span class="mr1">
-						<img src="http://placehold.it/100x100/000000" ng-src="{{ player.currentTrack.artwork_url  }}" alt="{{ player.currentTrack.title || '&nbsp;' }} by {{ player.currentTrack.user.username }}" />
-					</span>
-					{{ title }}
-				</a>
-			</li>
-			<li plangular="https://soundcloud.com/thenightthief/bag-of-bones-oxix52-remix" ng-class="{ 'darken': player.playing == track }">
-				<a ng-click="playPause($index)">
-					<span class="mr1">
-						<img src="http://placehold.it/100x100/000000" ng-src="{{ player.currentTrack.artwork_url  }}" alt="{{ player.currentTrack.title || '&nbsp;' }} by {{ player.currentTrack.user.username }}" />
-					</span>
-					{{ title }}
+					<span class="track-title">{{ title }}</span>
+					<br>
 				</a>
 			</li>
 		</ul>
 
-</div>
+<!-- </div> -->

@@ -1,0 +1,16 @@
+
+
+ul.film-gallery {
+	padding: 0 1rem;
+	padding-bottom:115px;
+	@media #{$medium-up} {
+		padding-bottom:65px;
+	}
+	@media #{$large-up} {
+
+	}
+	@media #{$xlarge-up} {
+
+	}
+}
+

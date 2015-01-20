@@ -1,3 +1,8 @@
+
+nav.tab-bar.show-for-small {
+	z-index:1;
+}
+
 // small nav
 .tab-bar {
 	height:3.3rem;
@@ -66,11 +71,13 @@ nav#mainMenu {
 #mainMenu {
 	position:absolute;
 	height:100%;
-	background:#313131;
+	background:$black + 5;
 	border-right:1px solid #212121;
 	@media #{$medium-up} {width:120px; z-index:10;}
 	@media #{$large-up} {width:160px;}
 	@media #{$xlarge-up} {width:180px;}
+
+	@include horizontal-gradient($black + 8, $black + 5);
 }
 
 .logo {

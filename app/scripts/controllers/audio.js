@@ -12,7 +12,8 @@ angular.module('theNightThiefApp')
     $scope.tracks = [
     	'https://soundcloud.com/thenightthief/my-love-is-whole',
     	'https://soundcloud.com/thenightthief/sunblind',
-    	'https://soundcloud.com/thenightthief/everweare',,
+    	'https://soundcloud.com/thenightthief/everweare',
     	'https://soundcloud.com/thenightthief/bag-of-bones-oxix52-remix'
     ];
+
   });

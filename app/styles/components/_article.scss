@@ -21,6 +21,13 @@
 	margin-top:60px;
 }
 
+.entry-header:last-of-type {
+	padding-bottom:100px;
+	@media #{$medium-up} {
+		padding-bottom:50px;
+	}
+}
+
 .entry-header .entry-title {
 	padding:0 12px;
 

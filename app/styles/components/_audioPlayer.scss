@@ -2,35 +2,100 @@
 //    border: 1px solid red !important;
 // }
 
-.player-wrap {
-	padding:1em 0;
-	@media #{$medium-up} {padding:2em;}
-	@media #{$large-up} {padding:3em 1em;}
+a:hover {
+	cursor: pointer;
 }
 
-.plangular-icon {
-	height:1em;
-	width:1em;
+
+.audio-player-wrapper {
+	height:100px;
+	width:100%;
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	background:$black + 10;
+	opacity:0.97;
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);
+	-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);
+	box-shadow:0 0 10px rgba(0,0,0,0.5);
+
+	@media #{$medium-up} {padding-left:120px;}
+	@media #{$large-up} {padding-left:160px;}
 }
 
-.player-control {
-	// border: 1px solid red !important;
+.audio-track-details {
+	text-align:center;
+	width:100%;
+	overflow:hidden;
+	padding:.2rem 0;
 
-	li a {
-		margin-bottom:0;
+	// background:$black + 10;
+	// padding-top:;
+	// border: 1px solid blue !important;
+
+	progress {
+		width:100%;
+		background:$gray;
+		display:block;
+		margin:.2rem 0 .4em;
+		// border: 1px solid red !important;
+	}
+
+	progress:focus, .audio-btn:focus, a:focus{
+		-webkit-appearance:none;
+		outline:none;
+	}
+
+	h3 {
+		margin:.5rem .3rem .2rem;
+		font-weight:200;
+		color: $white;
+		font-size: 1rem;
+		// border: 1px solid blue !important;
 	}
 }
 
-ul.button-group {
+
+
+.audio-player-ctrls {
+	// position:relative;
+	width:100%;
+	// height:100%;
+	// height:30px;
+	// border-top: 1px solid $black;
+	background: $black;
+	// border: 1px solid red !important;
+
+	-webkit-box-shadow:0 0 12px rgba(0,0,0,0.3);
+	-moz-box-shadow:0 0 12px rgba(0,0,0,0.3);
+	box-shadow:0 0 12px rgba(0,0,0,0.3);
+
+
+	.button-group.even-3 li .button {
+		border-color: $black - 10;
+		padding:.8rem .6rem .6rem;
+	}
+	.button {
+		margin-bottom:0;
+
+	}
 }
 
 .audio-btn, .audio-btn:hover, .audio-btn:focus {
 	background:transparent;
+	-webkit-appearance:none;
+	outline:none;
 
-	svg {
-		fill: $white;
+	svg.plangular-icon-previous, svg.plangular-icon-next {
+		fill: $gray;
+		// fill: transparent;
 		opacity: 1;
-		transition: .5s ease-in;
+		// transition: .5s ease-in;
+	}
+	svg.plangular-icon-play, svg.plangular-icon-pause {
+		fill: $white;
+
 	}
 }
 
@@ -39,23 +104,45 @@ ul.button-group {
 }
 
 
-progress {
-	// height:20px;
-	width:100%;
-	background:$gray;
-	display:block;
-	// width:100%;
-	margin:1em 0 .6em;
+.plangular-icon {
+	height:1em;
+	width:1em;
 }
 
-progress:focus, .audio-btn:focus, a:focus{
-	-webkit-appearance:none;
-	outline:none;
+
+
+
+
+
+// .player-wrap {
+// 	padding:1em 0;
+
+// }
+
+// .player-head {
+
+// }
+
+
+
+.player-control {
+	border: 1px solid red !important;
+
+	li a {
+		margin-bottom:0;
+	}
 }
+
+
+
+
+
+
 
 .track-time {
 	font-size: .8em;
 	font-weight:200;
+	border: 1px solid red !important;
 }
 
 ul.track-list li:hover {
@@ -76,20 +163,17 @@ ul.track-list {
 	list-style:none;
 	padding:0;
 	margin:0;
+	padding-bottom:120px;
 
 	li {
 		transition: .3s ease-in;
 		border-bottom: 1px solid $black - 5;
-		// border-bottom: 1px solid $white;
-		// padding: 1em;
-
 		.plays {
 			font-size:.8em;
 		}
 
 		a {
 			display:block;
-			// width:inherit;
 			padding:.8em;
 			color: $gray;
 		}
@@ -100,43 +184,16 @@ ul.track-list {
 }
 
 
-.player-head {
-	height:100%;
-	width:100%;
-	// background:red;
-	// padding:0;
-	// margin: 1em 0;
-}
+// .twenty {
+// 	width:40%;
+// 	height:100%;
+// 	display:inline-block;
+// 	@media #{$medium-up} {width:28%;}
+// 	@media #{$large-up} {width:12%;}
+// 	img {
+// 		height:100%;
+// 		width:100%;
+// 		vertical-align: baseline;
+// 	}
+// }
 
-.twenty {
-	width:40%;
-	height:100%;
-	display:inline-block;
-	// float:left;
-	// margin-left:1em;
-	@media #{$medium-up} {width:28%;}
-	@media #{$large-up} {width:12%;}
-	// @media #{$xlarge-up} {padding-left:190px;}
-
-	img {
-		height:100%;
-		width:100%;
-		vertical-align: baseline;
-	}
-
-}
-.eighty {
-	height:100%;
-	width: 52%;
-	margin-left:1em;
-	display:inline-block;
-	@media #{$medium-up} {width:60%;}
-	@media #{$large-up} {width:82%;}
-	// @media #{$xlarge-up} {padding-left:190px;}
-}
-
-.track-list a img {
-	height:40px;
-	width:40px;
-	margin-right:2em;
-}

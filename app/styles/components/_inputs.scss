@@ -1,0 +1,27 @@
+.form-wrapper {
+	padding-bottom:400px;
+	height:100%;
+	width:100%;
+}
+input[type="text"], textarea {
+	background: $black + 4;
+	border:none;
+	box-shadow: 0;
+	border-bottom:2px solid $red;
+	// color: $black + 30;
+}
+
+input[type="text"] {
+	padding-top:2rem;
+	padding-bottom:1rem;
+}
+input[type="text"]:focus, textarea:focus {
+	background: $black + 3;
+	box-shadow: none;
+	color: $white;
+}
+
+input[type="text"]:active, textarea:active {
+	background: $black + 3;
+	box-shadow: none;
+}

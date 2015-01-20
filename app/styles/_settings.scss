@@ -1029,21 +1029,21 @@ $menu-slide: "transform 500ms ease";
 // 23. Progress Bar
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// $include-html-media-classes: $include-html-classes;
+$include-html-media-classes: $include-html-classes;
 
 // We use this to set the progress bar height
-// $progress-bar-height: rem-calc(25);
-// $progress-bar-color: $vapor  ;
+$progress-bar-height: rem-calc(25);
+$progress-bar-color: $jet  ;
 
 // We use these to control the border styles
-// $progress-bar-border-color: scale-color($white, $lightness: 20%);
-// $progress-bar-border-size: 1px;
-// $progress-bar-border-style: solid;
-// $progress-bar-border-radius: $global-radius;
+$progress-bar-border-color: scale-color($white, $lightness: 20%);
+$progress-bar-border-size: 1px;
+$progress-bar-border-style: solid;
+$progress-bar-border-radius: 0;
 
 // We use these to control the margin & padding
-// $progress-bar-pad: rem-calc(2);
-// $progress-bar-margin-bottom: rem-calc(10);
+$progress-bar-pad: rem-calc(2);
+$progress-bar-margin-bottom: rem-calc(10);
 
 // We use these to set the meter colors
 // $progress-meter-color: $primary-color;

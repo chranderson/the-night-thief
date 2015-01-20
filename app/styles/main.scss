@@ -3,13 +3,16 @@
 
 @import
 	"settings",
+	"components/mixins",
 	"components/colors",
 	"components/type",
+	"components/inputs",
 	"components/content",
 	"components/nav",
 	"components/test",
 	"components/intro",
 	"components/article",
+	"components/film",
 	"components/audioPlayer",
 	"components/page-header";
 
@@ -20,23 +23,32 @@
   padding: 0.2em 0;
 }
 
+canvas {
+	// z-index:0;
+	top:0;
+}
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;
   overflow:hidden;
+  background: $black;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 /* Space out content a bit */
-html, body {
+html {
   // padding-top: 20px;
   // padding-bottom: 20px;
   // overflow:hidden;
-  background: $black;
+
   // height:100%;
+}
+
+body {
+	background:transparent;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -62,6 +74,7 @@ html, body {
 
 .inner-wrap {
 	height:100%;
+	// padding-bottom:120px;
 // border: 1px solid pink !important;
 	// overflow-y:scroll;
 	// padding-bottom:2em;

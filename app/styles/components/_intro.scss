@@ -1,4 +1,10 @@
+.intro-animation {
+
+	@media #{$medium-up} {padding: 5% 10%;}
+	@media #{$large-up} {padding: 2% 10%;}
+}
 #intro-logo {
+	// border: 1px solid blue !important;
 	.intro-globe {
 		fill: $red;
 	}
@@ -8,7 +14,8 @@
 	.intro-text {
 		// opacity:0;
 		fill: $white;
-
+		text-align: center;
+		margin:0 auto;
 		// -webkit-animation: intro-text 3s ease infinite;
 		animation: intro-text 3s ease-in initial;
 		-webkit-animation-delay: 3s; /* Chrome, Safari, Opera */
@@ -18,8 +25,8 @@
 
 	// display:block;
 	// fill: $white;
-	// @media #{$medium-up} {padding-left:130px;}
-	@media #{$large-up} {max-width:70%; margin-left:15%; }
+	@media #{$medium-up} {width:100%;max-width:650px;}
+	@media #{$large-up} {max-width:60%; margin-left:15%; }
 	// @media #{$xlarge-up} {padding-left:190px;}
 }
 

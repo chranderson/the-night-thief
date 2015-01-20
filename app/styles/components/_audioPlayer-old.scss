@@ -1,0 +1,142 @@
+// * {
+//    border: 1px solid red !important;
+// }
+
+.player-wrap {
+	padding:1em 0;
+	@media #{$medium-up} {padding:2em;}
+	@media #{$large-up} {padding:3em 1em;}
+}
+
+.plangular-icon {
+	height:1em;
+	width:1em;
+}
+
+.player-control {
+	// border: 1px solid red !important;
+
+	li a {
+		margin-bottom:0;
+	}
+}
+
+ul.button-group {
+}
+
+.audio-btn, .audio-btn:hover, .audio-btn:focus {
+	background:transparent;
+
+	svg {
+		fill: $white;
+		opacity: 1;
+		transition: .5s ease-in;
+	}
+}
+
+.audio-btn:hover svg{
+		// fill: $white - 50;
+}
+
+
+progress {
+	// height:20px;
+	width:100%;
+	background:$gray;
+	display:block;
+	// width:100%;
+	margin:1em 0 .6em;
+}
+
+progress:focus, .audio-btn:focus, a:focus{
+	-webkit-appearance:none;
+	outline:none;
+}
+
+.track-time {
+	font-size: .8em;
+	font-weight:200;
+}
+
+ul.track-list li:hover {
+	background:$black + 10;
+
+}
+
+ul.track-list li.darken {
+	background:$black - 10;
+	// color: $white;
+	a {
+		color: $white;
+	}
+}
+
+
+ul.track-list {
+	list-style:none;
+	padding:0;
+	margin:0;
+
+	li {
+		transition: .3s ease-in;
+		border-bottom: 1px solid $black - 5;
+		// border-bottom: 1px solid $white;
+		// padding: 1em;
+
+		.plays {
+			font-size:.8em;
+		}
+
+		a {
+			display:block;
+			// width:inherit;
+			padding:.8em;
+			color: $gray;
+		}
+	}
+	li:first-child {
+		border-top:1px solid $black - 5;
+	}
+}
+
+
+.player-head {
+	height:100%;
+	width:100%;
+	// background:red;
+	// padding:0;
+	// margin: 1em 0;
+}
+
+.twenty {
+	width:40%;
+	height:100%;
+	display:inline-block;
+	// float:left;
+	// margin-left:1em;
+	@media #{$medium-up} {width:28%;}
+	@media #{$large-up} {width:12%;}
+	// @media #{$xlarge-up} {padding-left:190px;}
+
+	img {
+		height:100%;
+		width:100%;
+		vertical-align: baseline;
+	}
+
+}
+.eighty {
+	height:100%;
+	width: 52%;
+	margin-left:1em;
+	display:inline-block;
+	@media #{$medium-up} {width:60%;}
+	@media #{$large-up} {width:82%;}
+	// @media #{$xlarge-up} {padding-left:190px;}
+}
+
+.track-list a img {
+	height:40px;
+	width:40px;
+	margin-right:2em;
+}
