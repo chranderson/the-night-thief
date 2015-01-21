@@ -39,11 +39,11 @@
 		</div> -->
 
 
-		<ul plangular class="track-list">
+		<ul class="track-list">
 			<li ng-repeat="track in tracks" plangular="{{ track }}" ng-class="{ 'darken': player.playing == track }">
 				<a ng-click="playPause($index)">
 					<span class="mr1">
-						<img src="http://placehold.it/100x100/000000" ng-src="{{ player.currentTrack.artwork_url  }}" alt="{{ title || '&nbsp;' }} by {{ player.currentTrack.user.username }}" />
+						<img src="http://placehold.it/100x100/000000" ng-src="{{ track.artwork_url  }}" alt="{{ title || '&nbsp;' }} by {{ track.user.username }}" />
 					</span>
 					<span class="track-title">{{ title }}</span>
 					<br>
