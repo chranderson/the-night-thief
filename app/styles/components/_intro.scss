@@ -5,103 +5,48 @@
 }
 #intro-logo {
 	// border: 1px solid blue !important;
+
 	.intro-globe {
 		fill: $red;
 	}
+
 	.intro-man {
 		fill: $black;
 	}
+
 	.intro-text {
-		// opacity:0;
 		fill: $white;
 		text-align: center;
 		margin:0 auto;
-		// -webkit-animation: intro-text 3s ease infinite;
 		animation: intro-text 3s ease-in initial;
 		-webkit-animation-delay: 3s; /* Chrome, Safari, Opera */
     animation-delay: 3s;
+		// -webkit-animation: intro-text 3s ease infinite;
 	}
 
+	@media #{$medium-up} {
+		width:100%;
+		max-width:650px;
+	}
 
-	// display:block;
-	// fill: $white;
-	@media #{$medium-up} {width:100%;max-width:650px;}
-	@media #{$large-up} {max-width:60%; margin-left:15%; }
-	// @media #{$xlarge-up} {padding-left:190px;}
+	@media #{$large-up} {
+		max-width:60%;
+		margin-left:15%;
+	}
+
+	@media #{$xlarge-up} {
+		padding-left:190px;
+	}
 }
 
 @keyframes intro-text {
-  0%        {opacity: 0}
-  // 50%  {opacity: .5}
+  0%   {opacity: 0}
+  50%  {opacity: .5}
   100% {opacity: 1}
-}
-
-// ////////////////////////
-// Main Elements - Loading
-// ////////////////////////
-
-// #globe {
-// 	opacity: 1;
-//   visibility: visible;
-//   -webkit-transition: opacity .3s 0s, visibility 0s 0s;
-//   -moz-transition: opacity .3s 0s, visibility 0s 0s;
-//   transition: opacity .3s 0s, visibility 0s 0s;
-// }
-// #globe.fadeout {
-// 	opacity: 0;
-//   visibility: hidden;
-//   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
-//   -moz-transition: opacity .3s 0s, visibility 0s .3s;
-//   transition: opacity .3s 0s, visibility 0s .3s;
-// }
-// #man {
-// 	opacity: 1;
-//   visibility: visible;
-//   -webkit-transition: opacity .3s 0s, visibility 0s 0s;
-//   -moz-transition: opacity .3s 0s, visibility 0s 0s;
-//   transition: opacity .3s 0s, visibility 0s 0s;
-// }
-// #man.fadeout {
-// 	opacity: 0;
-//   visibility: hidden;
-//   -webkit-transition: opacity .3s 0s, visibility 0s .3s;
-//   -moz-transition: opacity .3s 0s, visibility 0s .3s;
-//   transition: opacity .3s 0s, visibility 0s .3s;
-// }
-// #text {
-	// opacity: 1;
-  // visibility: visible;
-  // -webkit-transition: opacity .3s 0s, visibility 0s 0s;
-  // -moz-transition: opacity .3s 0s, visibility 0s 0s;
-  // transition: opacity .3s 0s, visibility 0s 0s;
-// }
-
-
-
-
-
-
-
-
-#particle-js {
-	height:100%;
-	width:100%;
-	// display:block;
-}
-
-canvas {
-	z-index:-1;
-	position:fixed;
-	top:50px;
-	left:0;
-	@media #{$medium-up} {position:fixed;left:130px;}
-	@media #{$large-up} {left:170px;}
-	@media #{$xlarge-up} {left:190px;}
 }
 
 hr.dark {
 	background:$black;
 	color: $black;
 	border-top:$gray;
-	// border-bottom:$gray;
 }

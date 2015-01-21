@@ -3,26 +3,22 @@
 	overflow-x:hidden;
 	overflow-y:auto;
 	-webkit-overflow-scrolling: touch;
+	padding-bottom:2em;
+
 	@media #{$medium-up} {
 		margin-left:120px;
-		// padding:1em;
 	}
+
 	@media #{$large-up} {
 		margin-left:160px;
 	}
+
 	@media #{$xlarge-up} {
 		padding-left:190px;
 		// padding:1.5em;
 	}
+
 	// border: 1px solid red !important;
-	padding-bottom:2em;
 }
 
-.content-inner {
-	// width:100%;
-// overflow-x:hidden;
-	// height:100%;
-	// border: 1px solid red !important;
-	// @media #{$large-up} {padding:1em;}
-	// @media #{$xlarge-up} {padding:1.5em	;}
-}
+.content-inner {}

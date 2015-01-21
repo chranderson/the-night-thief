@@ -39,19 +39,13 @@ html {
 }
 
 /* Space out content a bit */
-html {
-  // padding-top: 20px;
-  // padding-bottom: 20px;
-  // overflow:hidden;
-
-  // height:100%;
-}
+html {}
 
 body {
 	background:transparent;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
+
 .header,
 .marketing,
 .footer {
@@ -63,21 +57,27 @@ body {
 	position:absolute;
 	top:0;
 	bottom:0;
-	// overflow-y:auto;
 }
+
 .off-canvas-wrap, .inner-wrap {
-	// margin-top:-20px;
 	height:100%;
-	// overflow-y:auto;
-// border: 1px solid blue !important;
 }
 
 .inner-wrap {
 	height:100%;
-	// padding-bottom:120px;
-// border: 1px solid pink !important;
-	// overflow-y:scroll;
-	// padding-bottom:2em;
 }
 
-// .row {overflow:scroll;}
+#particle-js {
+	height:100%;
+	width:100%;
+}
+
+canvas {
+	z-index:-1;
+	position:fixed;
+	top:50px;
+	left:0;
+	@media #{$medium-up} {position:fixed;left:130px;}
+	@media #{$large-up} {left:170px;}
+	@media #{$xlarge-up} {left:190px;}
+}
