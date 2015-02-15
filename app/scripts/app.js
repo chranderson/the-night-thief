@@ -1,3 +1,24 @@
+/* global app:true */
+/* exported app */
+// 'use strict';
+
+// Declare app level module which depends on filters, and services
+// angular.module('theNightThiefApp', [
+// 		'theNightThiefApp.config',
+//     'theNightThiefApp.controllers',
+//     'theNightThiefApp.decorators',
+//     'theNightThiefApp.directives',
+//     'theNightThiefApp.filters',
+//     'theNightThiefApp.routes',
+//     'theNightThiefApp.services',
+// 		'mm.foundation.offcanvas',
+// 		'plangular',
+// 		'angularUtils.directives.dirPagination'
+//   ]);
+
+
+
+
 'use strict';
 
 /**
@@ -8,8 +29,8 @@
  *
  * Main module of the application.
  */
-angular
-  .module('theNightThiefApp', [
+var app = angular
+	.module('theNightThiefApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -18,36 +39,66 @@ angular
     'ngRoute',
     'ngSanitize',
     'mm.foundation.offcanvas',
-    'plangular'
+    'plangular',
+    'firebase',
+    'angularUtils.directives.dirPagination'
   ])
-  .config(function ($routeProvider, $locationProvider) {
+  .constant('FIREBASE_URL', 'https://nightthief.firebaseio.com/')
+  .run(['$rootScope', '$location', '$log', function($rootScope, $location, $log) {
+    $rootScope.$on('$routeChangeError', function(event, next, previous, error) {
+      if (error === 'AUTH_REQUIRED') {
+        $location.path('/login');
+      }
+    });
+    $rootScope.$log = $log;
+  }])
+  .config(['$routeProvider', '$logProvider', function($routeProvider, $logProvider) {
+  	 $logProvider.debugEnabled(true);
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        resolve: {
+          // controller will not be loaded until $waitForAuth resolves
+          // Auth refers to our $firebaseAuth wrapper above
+          'currentAuth': ['Auth', function(Auth) {
+            // $waitForAuth returns a promise so the resolve waits for it to complete
+            return Auth.auth.$waitForAuth();
+          }]
+        }
       })
-      .when('/audio', {
-        templateUrl: 'views/audio.html',
-        controller: 'AudioCtrl'
+      // .when('/film', {
+      //   templateUrl: 'views/film.html',
+      //   controller: 'FilmCtrl'
+      // })
+      // .when('/posts', {
+      //   templateUrl: 'views/posts.html',
+      //   controller: 'PostsCtrl'
+      // })
+      // .when('/posts/:postId', {
+      //     templateUrl: 'views/showpost.html',
+      //     controller: 'PostViewCtrl'
+      //   })
+      // .when('/contact', {
+      //   templateUrl: 'views/contact.html',
+      //   controller: 'ContactCtrl'
+      // })
+      .when('/login', {
+        templateUrl: 'views/register.html',
+        controller: 'AuthCtrl'
       })
-      .when('/film', {
-        templateUrl: 'views/film.html',
-        controller: 'FilmCtrl'
-      })
-      .when('/contact', {
-        templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl'
-      })
-      .when('/blog', {
-        templateUrl: 'views/blog.html',
-        controller: 'BlogCtrl'
+      .when('/account', {
+        templateUrl: 'views/account.html',
+        controller: 'AuthCtrl'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/404.html'
       });
+  }]);
 
-      $locationProvider.html5Mode(false);
-  });
+
+
 
 
 

@@ -7,8 +7,7 @@
  * # ContactCtrl
  * Controller of the theNightThiefApp
  */
-angular.module('theNightThiefApp')
-  .controller('ContactCtrl', function ($scope) {
+app.controller('ContactCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',

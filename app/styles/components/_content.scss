@@ -4,17 +4,21 @@
 	overflow-y:auto;
 	-webkit-overflow-scrolling: touch;
 	padding-bottom:2em;
+	width:100%;
 
 	@media #{$medium-up} {
 		margin-left:120px;
+		width: calc(100% - 120px);
 	}
 
 	@media #{$large-up} {
 		margin-left:160px;
+		width: calc(100% - 160px);
 	}
 
 	@media #{$xlarge-up} {
 		padding-left:190px;
+		width: calc(100% - 190px);
 		// padding:1.5em;
 	}
 

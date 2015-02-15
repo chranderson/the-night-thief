@@ -1,4 +1,7 @@
 <div class="intro-animation">
+<a ng-hide="auth.user" ng-click="logout()"><h1>Logout</h1></a>
+<a ng-show="auth.user" ng-click="login()"><h1>Login</h1></a>
+
 	<svg id="intro-logo" xmlns="http://www.w3.org/2000/svg" viewBox="50 50 100 100" enable-background="new 50 50 100 100">
 			<def>
 				<circle id="globe" class="st10" cx="100" cy="100" r="40">
@@ -12,7 +15,7 @@
 						<animate
 			    			attributeName="fill"
 			    			values="#8e1f22; #f9fcea; #bcbdc0; #231f20; #231f20; #8e1f22; "
-			    			dur="30s"
+			    			dur="5s"
 			    			repeatCount="indefinite"/>
 					</path>
 				</def>
@@ -20,3 +23,14 @@
 				<use xlink:href="#image" transform="translate(0 0)"/>
 	</svg>
 </div>
+<ul class="track-list">
+			<li ng-repeat="song in songs" plangular="{{song}}" ng-class="{ 'darken': player.playing == track }">
+				<a ng-click="playPause($index)">
+					<span class="mr1">
+						<img src="http://placehold.it/100x100/000000" ng-src="{{ track.artwork_url  }}" alt="{{ title || '&nbsp;' }} by {{ track.user.username }}" />
+					</span>
+					<span class="track-title">{{ title }}</span>
+					<br>
+				</a>
+			</li>
+		</ul>

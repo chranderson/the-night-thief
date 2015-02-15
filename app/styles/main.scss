@@ -14,18 +14,14 @@
 	"components/article",
 	"components/film",
 	"components/audioPlayer",
-	"components/page-header";
+	"components/page-header",
+	"components/buttons";
 
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
-}
-
-canvas {
-	// z-index:0;
-	top:0;
 }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -69,15 +65,16 @@ body {
 
 #particle-js {
 	height:100%;
-	width:100%;
+
+	width: calc(100% - 160px);
 }
 
 canvas {
-	z-index:-1;
 	position:fixed;
-	top:50px;
+	top:0;
 	left:0;
+	z-index:-1;
 	@media #{$medium-up} {position:fixed;left:130px;}
-	@media #{$large-up} {left:170px;}
+	@media #{$large-up} {left:160px;}
 	@media #{$xlarge-up} {left:190px;}
 }

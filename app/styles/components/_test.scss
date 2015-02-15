@@ -13,3 +13,23 @@ ul.off-canvas-list li a:active, ul.off-canvas-list li a:hover {
 }
 
 
+.form-wrapper {
+	// outline: 2px solid $white;
+	margin-top:60px;
+	padding:1rem;
+}
+
+.paginate-wrap {
+	display:block;
+	width:60%;
+	margin:0 auto;
+	margin-bottom:60px;
+}
+
+.preview-thumb {
+	width:100%;
+	padding:1rem;
+	border:1px solid $red;
+	// max-width:200px;
+	height: auto;
+}

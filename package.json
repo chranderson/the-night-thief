@@ -1,6 +1,6 @@
 {
-  "name": "thenightthief",
-  "version": "0.0.0",
+  "name": "theNightThief",
+  "version": "0.0.1",
   "dependencies": {
     "plangular": "0.0.1"
   },

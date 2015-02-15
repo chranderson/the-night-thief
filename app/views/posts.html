@@ -1,0 +1,44 @@
+
+	<!-- <div flow-init="{target: '/upload'}"
+	     flow-files-submitted="$flow.upload()"
+	          flow-file-success="$file.msg = $message">
+
+		<div class="large-6 columns">
+			<input type="file" flow-btn/>
+			Input OR Other element as upload button
+			<span class="btn" flow-btn>Upload File</span>
+			<div flow-file-progress=" ... events can be also assigned inside flow-init ... "></div>
+			<table>
+				<tr ng-repeat="file in $flow.files">
+			    <td>{{$index+1}}</td>
+			    <td>{{file.name}}</td>
+			    <td>{{file.msg}}</td>
+				</tr>
+			</table>
+		</div>
+		<div class="large-6 columns">
+			<div class="preview-thumb"><img flow-img="$flow.files[0]" /></div>
+		</div>
+	</div> -->
+
+
+<article class="entry-header"
+	dir-paginate="post in posts | itemsPerPage: 4">
+		<h1 class="entry-title">
+			<a ng-href="#/posts/{{ post.$id }}">{{post.title}}</a>
+		</h1>
+		<p class="entry-details">
+		<span class="url">({{ post.authorUrl | hostnameFromUrl }})</span>
+			by
+			<a class="aside-author" ng-href="{{post.authorLink}}">{{post.author}}</a>
+		</p>
+		<p class="entry-summary">{{post.body}}</p>
+		<footer>
+			<a class="btn btn-large" ng-click="deletePost(post)">delete</a>
+			<a class="btn btn-large" ng-href="#/posts/{{ post.$id }}">read more</a>
+		</footer>
+		<hr>
+	</article>
+	<div class="paginate-wrap">
+		<dir-pagination-controls template-url="views/dirPagination.tpl.html"></dir-pagination-controls>
+	</div>

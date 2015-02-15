@@ -1,27 +1,86 @@
 .form-wrapper {
+	// border:1px solid red !important;
 	padding-bottom:400px;
 	height:100%;
 	width:100%;
+	padding:10rem;
+
+
+	@media #{$medium-up} {
+		width:80%;
+		margin:0 auto;
+	}
 }
-input[type="text"], textarea {
-	background: $black + 4;
+input[type="text"], input[type="password"], input[type="email"], textarea {
+	background: $black + 5;
 	border:none;
 	box-shadow: 0;
-	border-bottom:2px solid $red;
+
+	// when error
+	// border-bottom:2px solid $red;
+
+	// normal
+	border-bottom:2px solid $white - 100;
+
+	// successful
+	// border-bottom:2px solid $success;
+
 	// color: $black + 30;
+	font-size:2rem;
+	margin: 2rem 0;
 }
 
-input[type="text"] {
-	padding-top:2rem;
-	padding-bottom:1rem;
+input[type="text"], input[type="password"], input[type="email"] {
+	padding-top:1.5rem;
+	padding-bottom:1.5rem;
+	color: $white - 30;
+	// text-shadow: 0 -3px 8px rgba(0,0,0,0.7);
 }
-input[type="text"]:focus, textarea:focus {
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, textarea:focus {
 	background: $black + 3;
 	box-shadow: none;
 	color: $white;
 }
 
+
 input[type="text"]:active, textarea:active {
 	background: $black + 3;
 	box-shadow: none;
+}
+
+button:hover, button:focus, input[type="button"]:active, input[type="button"]:focus {
+	background-color: transparent;
+	outline: 0;
+}
+
+textarea {
+	min-height:10rem;
+}
+
+::-webkit-input-placeholder {
+ color: $black - 0;
+ // text-transform: uppercase;
+ // text-align: center;
+ // font-weight: bold;
+}
+:-moz-placeholder { /* older Firefox*/
+ // font-size:14px;
+ color: $black - 0;
+ // text-transform: uppercase;
+ // text-align: center;
+ // font-weight: bold;
+}
+::-moz-placeholder { /* Firefox 19+ */
+ // font-size: 14px;
+ color: $black - 0;
+ // text-transform: uppercase;
+ // text-align: center;
+ // font-weight: bold;
+}
+:-ms-input-placeholder {
+ // font-size: 14px;
+ color: $black - 0;
+ // text-transform: uppercase;
+ // text-align: center;
+ // font-weight: bold;
 }

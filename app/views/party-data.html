@@ -1,0 +1,76 @@
+<li ng-show-auth role="menu-item" class="svg-nav-li">
+	<a ng-href="#/party-data">
+		<a ng-click="logout()">Log Out</button>
+		</a>
+	</li>
+<div class="row">
+<div class="medium-12 columns">
+	<div class="form-wrapper">
+		<form>
+		        <legend>Profile</legend>
+
+		        <label>
+		            <!-- <span>Name:</span> -->
+		            <input type="text" name="name" ng-model="profile.name" placeholder="whats yo name?"/>
+		        </label>
+
+		        <label>
+		            <span>Email:</span>
+		            <br />{{profile.email}}
+		        </label>
+		</form>
+	</div>
+</div>
+<div class="medium-6 columns">
+	<div class="form-wrapper">
+		<form>
+		        <legend>Change Password</legend>
+
+		        <label>
+		            <!-- <span>Old Password:</span> -->
+		            <input type="password" ng-keypress="clear()" ng-model="oldpass" placeholder="old password"/>
+		        </label>
+
+		        <label>
+		            <!-- <span>New Password:</span> -->
+		            <input type="password" ng-keypress="clear()" ng-model="newpass" placeholder="new password"/>
+		        </label>
+
+		        <label>
+		            <!-- <span>Confirm New Password:</span> -->
+		            <input type="password" ng-keypress="clear()" ng-model="confirm" placeholder="confirm new password"/>
+		        </label>
+
+		        <button ng-click="changePassword(oldpass, newpass, confirm)">change password</button>
+
+		        <p class="error" ng-show="err">{{err}}</p>
+		        <p class="good" ng-show="msg">{{msg}}</p>
+		</form>
+	</div>
+</div>
+<div class="medium-6 columns">
+	<div class="form-wrapper">
+		<form>
+
+		        <legend>Change Email</legend>
+
+		        <label>
+		            <!-- <span>New Email:</span> -->
+		            <input type="text" ng-keypress="clear()" ng-model="newEmail" placeholder="new email"/>
+		        </label>
+
+		        <label>
+		            <!-- <span>Password:</span> -->
+		            <input type="password" ng-keypress="clear()" ng-model="pass" placeholder="password"/>
+		        </label>
+
+		        <button ng-click="changeEmail(pass, newEmail)">update email</button>
+
+		        <p class="error" ng-show="emailerr">{{emailerr}}</p>
+		        <p class="good" ng-show="emailmsg">{{emailmsg}}</p>
+
+		</form>
+
+
+	</div>
+</div>

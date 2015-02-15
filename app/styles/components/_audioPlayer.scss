@@ -1,5 +1,5 @@
 * {
-//    border: 1px solid red !important;
+   // border: 1px solid red !important;
 }
 
 a:hover {
@@ -8,6 +8,7 @@ a:hover {
 
 
 .audio-player-wrapper {
+	box-sizing:border-box;
 	height:100px;
 	width:100%;
 	position:fixed;
@@ -20,8 +21,15 @@ a:hover {
 	-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);
 	box-shadow:0 0 10px rgba(0,0,0,0.5);
 
-	@media #{$medium-up} {padding-left:120px;}
-	@media #{$large-up} {padding-left:160px;}
+	@media #{$medium-up} {
+		// border: 1px solid $red;
+		background:transparent;
+		box-shadow:none;
+		height:60px;
+	}
+	@media #{$large-up} {
+
+	}
 }
 
 .audio-track-details {
@@ -30,13 +38,33 @@ a:hover {
 	overflow:hidden;
 	padding:.2rem 0;
 	// border: 1px solid red !important;
+	@media #{$medium-up} {
+		position:absolute;
+		bottom:0;
+		left:120px;
+		height:100%;
+		// padding-left:120px;
+		// display:inline-block;
+		// width:500px;
+		width: calc(100% - 120px);
+	}
+	@media #{$large-up} {
+		left:160px;
+		width: calc(100% - 160px);
+	}
+
+
 
 	progress {
 		width:100%;
 		background:$gray;
-		display:block;
+		// display:block;
 		margin:.2rem 0 .4em;
 		// border: 1px solid red !important;
+
+		@media #{$medium-up} {
+			margin-bottom:0;
+		}
 	}
 
 	progress:focus, .audio-btn:focus, a:focus{
@@ -50,6 +78,14 @@ a:hover {
 		color: $white;
 		font-size: 1rem;
 		// border: 1px solid red !important;
+		@media #{$medium-up} {
+			text-align:left;
+			padding-left:1rem;
+		}
+		@media #{$large-up} {
+
+		}
+
 	}
 }
 
@@ -63,9 +99,46 @@ a:hover {
 	box-shadow:0 0 12px rgba(0,0,0,0.3);
 	// border: 1px solid red !important;
 
+	@media #{$medium-up} {
+		// border: 1px solid red !important;
+		width: 120px;
+		height:100%;
+	}
+	@media #{$large-up} {
+		width:160px;
+	}
+
+	.play-btn {
+		@media #{$medium-up} {
+		width: 120px;
+		}
+		@media #{$large-up} {
+		width:160px;
+	}
+
+
+
+	}
+	.button-group {
+		height:100%;
+		// border:1px solid white;
+	}
 	.button-group.even-3 li .button {
 		border-color: $black - 10;
 		padding:.8rem .6rem .6rem;
+
+		@media #{$medium-up} {
+			// border:1px solid blue;
+			height:60px;
+			margin:0;
+
+
+		}
+		@media #{$large-up} {
+
+		}
+
+
 	}
 	.button {
 		margin-bottom:0;
@@ -77,9 +150,19 @@ a:hover {
 	-webkit-appearance:none;
 	outline:none;
 
+	svg.plangular-icon-previous, svg.plangular-icon-next, svg.plangular-icon-play, svg.plangular-icon-pause {
+		@media #{$medium-up} {
+			vertical-align:middle;
+			height:100%;
+		}
+	}
 	svg.plangular-icon-previous, svg.plangular-icon-next {
 		fill: $gray;
 		opacity: 1;
+		@media #{$medium-up} {
+			width:0.6rem;
+		}
+
 	}
 	svg.plangular-icon-play, svg.plangular-icon-pause {
 		fill: $white;
@@ -97,7 +180,7 @@ a:hover {
 
 
 .player-control {
-	border: 1px solid red !important;
+	// border: 1px solid red !important;
 
 	li a {
 		margin-bottom:0;
