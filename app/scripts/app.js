@@ -90,7 +90,15 @@ var app = angular
       })
       .when('/account', {
         templateUrl: 'views/account.html',
-        controller: 'AuthCtrl'
+        controller: 'AuthCtrl',
+        resolve: {
+          // controller will not be loaded until $waitForAuth resolves
+          // Auth refers to our $firebaseAuth wrapper above
+          'currentAuth': ['Auth', function(Auth) {
+            // $waitForAuth returns a promise so the resolve waits for it to complete
+            return Auth.auth.$requireAuth();
+          }]
+        }
       })
       .otherwise({
         redirectTo: '/404.html'

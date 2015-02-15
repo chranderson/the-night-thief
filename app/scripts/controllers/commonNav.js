@@ -8,8 +8,10 @@
  * Controller of the theNightThiefApp
  */
 
-app.controller('commonNavCtrl', ['$scope', '$location', 'Auth',
-	function($scope, $location, Auth) {
+app.controller('commonNavCtrl', ['$scope', '$rootScope', 'currentAuth', '$location', 'Auth',
+	function($scope, $rootScope, currentAuth, $location, Auth) {
+
+	$rootScope.loggedIn = currentAuth;
 
 	$scope.logout = function () {
 	    		Auth.logout();

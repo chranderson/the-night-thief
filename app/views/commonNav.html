@@ -13,9 +13,9 @@
 	</a>
 	<section class="nav-items">
 		<ul class="side-nav" role="navigation" title="Page List">
-				<li ng-hide-auth role="menu-item"><a ng-href="#/login">Login</a></li>
-				<li ng-show-auth role="menu-item"><a ng-click="logout()">Logout</a></li>
-				<li ng-show-auth role="menu-item" class="svg-nav-li">
+				<li ng-hide="loggedIn" role="menu-item"><a ng-href="#/login">Login</a></li>
+				<li ng-show="loggedIn" role="menu-item"><a ng-click="logout()">Logout</a></li>
+				<li ng-show="loggedIn" role="menu-item" class="svg-nav-li">
 					<a ng-href="#/account">
 						Account
 					</a>

@@ -11,11 +11,18 @@
  	var ref = new Firebase(FIREBASE_URL);
 
 
- 	if (!Auth.user) {
- 		var userData = ref.getAuth();
- 		$scope.currentEmail = userData.password.email;
- 		$log.debug(userData.password.email);
- 	}
+ 	// $scope.loggedIn = currentAuth;
+ 	// if (currentAuth) {
+ 	// 	var userData = ref.getAuth();
+ 	// 	$scope.currentEmail = userData.password.email;
+ 	// 	$log.debug(userData.password.email);
+ 	// }
+
+ 	// if (!currentAuth) {
+ 	// 	var userData = ref.getAuth();
+ 	// 	$scope.currentEmail = userData.password.email;
+ 	// 	$log.debug(userData.password.email);
+ 	// }
 
  	$scope.user = {
  		email: '',
@@ -56,6 +63,7 @@
 
  	$scope.login = function () {
  		Auth.login($scope.loginEmail, $scope.loginPassword);
+ 		$rootScope.loggedIn = currentAuth;
  	};
 
  	$scope.newPassword = function () {
