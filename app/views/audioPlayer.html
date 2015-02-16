@@ -1,0 +1,25 @@
+<div plangular class="audio-player-wrapper show-for-small-only">
+				<div class="audio-track-details">
+					<progress  class="meter" value="{{ player.currentTime / player.duration || 0 }}" ng-click="player.seek($event)" type="alert">{{ player.currentTime / duration }}</progress>
+					<h3> {{ player.currentTrack.title || '&nbsp;' }} </h3>
+				</div>
+				<div class="audio-player-ctrls">
+					<ul class="button-group even-3">
+						<li><a role="button" aria-label="previous track" class="button audio-btn" ng-click="previous()" title="Previous Track"><svg plangular-icon="previous"></svg></a></li>
+						<li>
+							<a role="button" aria-label="play and pause button" class="button audio-btn play" ng-click="player.playPause(player.i, player.playlistIndex)" title="Play / Pause">
+								<span ng-if="!player.playing"><svg plangular-icon="play" class="animated pulse"></svg></span>
+				        <span ng-if="player.playing"><svg plangular-icon="pause"></svg></span>
+							</a>
+						</li>
+						<li><a role="button" aria-label="next track" class="button audio-btn" ng-click="next()" title="Next Track"><svg plangular-icon="next"></svg></a></li>
+					</ul>
+				</div>
+				<ul class="track-list">
+					<!-- <li ng-repeat="track in tracks" plangular="{{ track.url }}" class="ng-scope"></li> -->
+					<li plangular="https://soundcloud.com/thenightthief/my-love-is-whole" class="ng-scope"> </li>
+					<li plangular="https://soundcloud.com/thenightthief/sunblind" class="ng-scope"> </li>
+					<li plangular="https://soundcloud.com/thenightthief/everweare" class="ng-scope"> </li>
+					<li plangular="https://soundcloud.com/thenightthief/bag-of-bones-oxix52-remix" class="ng-scope"> </li>
+				</ul>
+			</div>

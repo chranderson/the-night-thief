@@ -20,10 +20,10 @@ a:hover {
 	-webkit-box-shadow:0 0 10px rgba(0,0,0,0.5);
 	-moz-box-shadow:0 0 10px rgba(0,0,0,0.5);
 	box-shadow:0 0 10px rgba(0,0,0,0.5);
-
 	@media #{$medium-up} {
 		// border: 1px solid $red;
-		background:transparent;
+		// background:transparent;
+		opacity: 0.8;
 		box-shadow:none;
 		height:60px;
 	}
@@ -55,22 +55,45 @@ a:hover {
 
 
 
-	progress {
-		width:100%;
-		background:$gray;
-		// display:block;
-		margin:.2rem 0 .4em;
-		// border: 1px solid red !important;
+	// progress {
+	// 	width:100%;
+	// 	background:$red;
+	// 	// display:block;
+	// 	// margin:.2rem 0 .4em;
+	// 	// border: 1px solid red !important;
 
-		@media #{$medium-up} {
-			margin-bottom:0;
-		}
+	// 	@media #{$medium-up} {
+	// 		margin-bottom:0;
+	// 	}
+	// }
+
+	progress {
+	  display: block;
+	  width: 100%;
+	  height: .6rem;
+	  margin: 0rem 0;
+	  background-color: $black;
+	  border: 0;
+	  -webkit-appearance: none;
+	  cursor: pointer;
+	  &::-webkit-progress-bar {
+	    -webkit-appearance: none;
+	    background-color: $black;
+	  }
+	  &::-webkit-progress-value {
+	    -webkit-appearance: none;
+	    background-color: $red;
+	  }
+	  &::-moz-progress-bar {
+	    background-color: $black;
+	  }
 	}
 
 	progress:focus, .audio-btn:focus, a:focus{
 		-webkit-appearance:none;
 		outline:none;
 	}
+
 
 	h3 {
 		margin:.5rem .3rem .2rem;
@@ -132,7 +155,6 @@ a:hover {
 			height:60px;
 			margin:0;
 
-
 		}
 		@media #{$large-up} {
 
@@ -165,12 +187,21 @@ a:hover {
 
 	}
 	svg.plangular-icon-play, svg.plangular-icon-pause {
-		fill: $white;
+		// fill: $white;
 
 	}
 }
 
-.audio-btn:hover svg{}
+.audio-btn:hover svg.plangular-icon-play{
+	fill: $red + 5;
+}
+
+svg.plangular-icon.plangular-icon-play {
+	fill: $red;
+}
+svg.plangular-icon.plangular-icon-play:hover {
+
+}
 
 
 .plangular-icon {
@@ -231,3 +262,6 @@ ul.track-list {
 	}
 }
 
+a.button.audio-btn.play {
+
+}

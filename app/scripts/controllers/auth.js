@@ -23,7 +23,6 @@
  	// 	$scope.currentEmail = userData.password.email;
  	// 	$log.debug(userData.password.email);
  	// }
-
  	$scope.user = {
  		email: '',
  		password: '',
@@ -63,7 +62,7 @@
 
  	$scope.login = function () {
  		Auth.login($scope.loginEmail, $scope.loginPassword);
- 		$rootScope.loggedIn = currentAuth;
+ 		// $rootScope.loggedIn = currentAuth;
  	};
 
  	$scope.newPassword = function () {

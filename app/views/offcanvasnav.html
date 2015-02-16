@@ -1,0 +1,19 @@
+
+	<ul class="off-canvas-list" ng-controller="commonNavCtrl" role="navigation" title="Page List">
+
+
+
+		<li ng-hide="authData" role="menu-item"><a ng-href="#/login">Login</a></li>
+		<li ng-show="authData" role="menu-item"><a ng-click="logout()">Logout</a></li>
+		<li ng-show="authData" role="menu-item"><a ng-href="#/account">Account</a></li>
+
+		<li role="menu-item"><a ng-href="#/">Home</a></li>
+		<li role="menu-item"><a ng-href="#/posts">Blog</a></li>
+		<li role="menu-item"><a ng-href="#/film">Film</a></li>
+		<li role="menu-item"><a ng-href="#/contact">Contact</a></li>
+    <li role="menu-item"><a ng-href="https://www.facebook.com/thenightthiefofficial" target="_blank">Facebook</a></li>
+    <li role="menu-item"><a ng-href="https://soundcloud.com/thenightthief" target="_blank">Soundcloud</a></li>
+    <li role="menu-item"><a ng-href="https://twitter.com/nightthiefband" target="_blank">Twitter</a></li>
+    <li role="menu-item"><a ng-href="https://thenightthief.bandcamp.com/" target="_blank">Bandcamp</a></li>
+    <li role="menu-item"><a ng-href="https://vimeo.com/thenightthiefband" target="_blank">Vimeo</a></li>
+  </ul>

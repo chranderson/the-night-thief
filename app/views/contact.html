@@ -2,23 +2,42 @@
 	<header>
 		<p>Shoot us a message to talk to us in real life. Also, sign up for our mailing list if you dont mind!</p>
 	</header>
-	<div class="form-wrapper">
-		<!-- <form>
-		    <div>
-		      <label class="">
-		        <input type="text" class="" ng-model="Name" placeholder="Name" />
-		      </label>
-		    </div>
-		    <div>
-		      <label>
-		        <input type="text" ng-model="Email Address" placeholder="Email Address" />
-		      </label>
-		    </div>
-		    <div>
-		      <label>
-		        <textarea type="text" placeholder="Message..." ng-model="Whats up?"></textarea>
-		      </label>
-		    </div>
+	<br/>
 
-		</form> -->
+	<div class="row">
+		<div class="medium-6 columns">
+			<div class="form-wrapper">
+				<form ng-submit="submitContact()">
+				    name: {{contact.name}}<br>
+				    email: {{contact.email}}<br>
+				    message: {{contact.message}}
+				    <div>
+				      <label class="">
+				        <input type="email" class="" ng-model="contact.email" placeholder="Email Address" />
+				      </label>
+				    </div>
+				    <div>
+				      <label>
+				        <input type="text" ng-model="contact.name" placeholder="Name" />
+				      </label>
+				    </div>
+				    <div>
+				      <label>
+				        <textarea type="text" placeholder="Whats up?" ng-model="contact.message"></textarea>
+				      </label>
+				    </div>
+						<button type="submit" aria-label="contact form submit" class="neon-btn">submit</button>
+				</form>
+			</div>
+		</div>
+		<div class="medium-6 columns">
+			<div class="form-wrapper">
+				<div ng-repeat="contact in contacts">
+				  <a ng-href="mailto:{{ contact.email }}?website">{{ contact.name }}</a>
+				  <a ng-click="deleteContact(contact)">delete</a>
+				  <p> {{contact.message}} </p>
+				</div>
+			</div>
+		</div>
 	</div>
+

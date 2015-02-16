@@ -1,23 +1,5 @@
 /* global app:true */
 /* exported app */
-// 'use strict';
-
-// Declare app level module which depends on filters, and services
-// angular.module('theNightThiefApp', [
-// 		'theNightThiefApp.config',
-//     'theNightThiefApp.controllers',
-//     'theNightThiefApp.decorators',
-//     'theNightThiefApp.directives',
-//     'theNightThiefApp.filters',
-//     'theNightThiefApp.routes',
-//     'theNightThiefApp.services',
-// 		'mm.foundation.offcanvas',
-// 		'plangular',
-// 		'angularUtils.directives.dirPagination'
-//   ]);
-
-
-
 
 'use strict';
 
@@ -68,10 +50,10 @@ var app = angular
           }]
         }
       })
-      // .when('/film', {
-      //   templateUrl: 'views/film.html',
-      //   controller: 'FilmCtrl'
-      // })
+      .when('/film', {
+        templateUrl: 'views/film.html',
+        controller: 'FilmCtrl'
+      })
       // .when('/posts', {
       //   templateUrl: 'views/posts.html',
       //   controller: 'PostsCtrl'
@@ -80,13 +62,21 @@ var app = angular
       //     templateUrl: 'views/showpost.html',
       //     controller: 'PostViewCtrl'
       //   })
-      // .when('/contact', {
-      //   templateUrl: 'views/contact.html',
-      //   controller: 'ContactCtrl'
-      // })
+      .when('/contact', {
+        templateUrl: 'views/contact.html',
+        controller: 'ContactCtrl'
+      })
       .when('/login', {
         templateUrl: 'views/register.html',
-        controller: 'AuthCtrl'
+        controller: 'AuthCtrl',
+        resolve: {
+          // controller will not be loaded until $waitForAuth resolves
+          // Auth refers to our $firebaseAuth wrapper above
+          'currentAuth': ['Auth', function(Auth) {
+            // $waitForAuth returns a promise so the resolve waits for it to complete
+            return Auth.auth.$waitForAuth();
+          }]
+        }
       })
       .when('/account', {
         templateUrl: 'views/account.html',

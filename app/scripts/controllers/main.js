@@ -10,14 +10,19 @@
  app.controller('MainCtrl', ['$scope','currentAuth', '$location', 'Auth', 'FIREBASE_URL', '$log',
  	function ($scope, currentAuth, $location, Auth, FIREBASE_URL, $log) {
 	 	$log.debug(currentAuth);
+	 	var authstuff = currentAuth;
+
+	 	// $log.debug(authstuff.password.name);
 	 	if (!currentAuth)   {
 	 		$location.path('/login');
 	 	}
 
-	    	$scope.logout = function () {
-	    		Auth.logout();
-	    		$location.path('/login');
-	    	};
+
+
+	    	// $scope.logout = function () {
+	    	// 	Auth.logout();
+	    	// 	$location.path('/login');
+	    	// };
 
 	    	Auth.monitorAuth();
 

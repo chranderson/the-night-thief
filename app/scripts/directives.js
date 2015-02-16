@@ -2,12 +2,21 @@
 
 /* Directives */
 
+
+angular.module('myApp.directives', ['simpleLogin'])
+
+  .directive('appVersion', ['version', function(version) {
+    return function(scope, elm) {
+      elm.text(version);
+    };
+  }])
+
   /**
    * A directive that shows elements only when user is logged in.
    */
-  app.directive('ngShowAuth', ['currentAuth', '$timeout', function (currentAuth, $timeout) {
+  .directive('ngShowAuth', ['simpleLogin', '$timeout', function (simpleLogin, $timeout) {
     var isLoggedIn;
-    currentAuth.watch(function(user) {
+    simpleLogin.watch(function(user) {
       isLoggedIn = !!user;
     });
 
@@ -25,7 +34,7 @@
         }
 
         update();
-        currentAuth.watch(update, scope);
+        simpleLogin.watch(update, scope);
       }
     };
   }])
@@ -33,9 +42,9 @@
   /**
    * A directive that shows elements only when user is logged out.
    */
-  .directive('ngHideAuth', ['Auth', '$firebaseAuth', 'currentAuth', '$log', '$timeout', function (Auth, $firebaseAuth, $log, currentAuth, $timeout) {
+  .directive('ngHideAuth', ['simpleLogin', '$timeout', function (simpleLogin, $timeout) {
     var isLoggedIn;
-    currentAuth.watch(function(user) {
+    simpleLogin.watch(function(user) {
       isLoggedIn = !!user;
     });
 
@@ -53,7 +62,7 @@
         }
 
         update();
-        currentAuth.watch(update, scope);
+        simpleLogin.watch(update, scope);
       }
     };
   }]);

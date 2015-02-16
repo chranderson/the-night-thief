@@ -8,8 +8,8 @@
  * Controller of the theNightThiefApp
  */
  // angular.module('theNightThiefApp')
- app.factory('Auth', [ 'FIREBASE_URL', '$firebaseAuth', '$log',
- 	function (FIREBASE_URL, $firebaseAuth, $log) {
+ app.factory('Auth', [ 'FIREBASE_URL', '$firebaseAuth', '$log', '$location',
+ 	function (FIREBASE_URL, $firebaseAuth, $log, $location) {
  		var ref = new Firebase(FIREBASE_URL);
 
  		var Auth = {
@@ -69,6 +69,10 @@
  						}
  					} else {
  						$log.debug('Authenticated successfully with payload:', authData);
+
+
+ 						$location.path('/');
+
  						return authData;
  					}
  				});
@@ -128,9 +132,13 @@
  			monitorAuth: function () {
  				function authDataCallback(authData) {
  					if (authData) {
- 						$log.debug('User ' + authData.password.email + ' is logged in with ' + authData.provider);
+ 						var userLoggedin = true;
+ 						$log.debug('User ' + authData.password.email + ' is logged in with ' + authData.provider, userLoggedin);
+ 						return userLoggedIn;
  					} else {
- 						$log.debug('User is logged out');
+ 						var userLoggedIn = false;
+ 						$log.debug('User is logged out', userLoggedIn);
+ 						return userLoggedIn;
  					}
  				}
  				ref.onAuth(authDataCallback);
