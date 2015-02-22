@@ -4,7 +4,7 @@
 
 
 		  <h2>Login</h2>
-
+			<p ng-show="error" class="text-danger">{{ error }}</p>
 		  <form ng-submit="login()">
 		    <input type="email" ng-model="loginEmail" placeholder="Email" class="form-control"><br>
 		    <input type="password" ng-model="loginPassword" placeholder="Password" class="form-control"><br>

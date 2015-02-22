@@ -1,0 +1,46 @@
+
+
+<header>
+		<p>New Post</p>
+	</header>
+	<br/>
+
+	<div class="row">
+		<div class="medium-12 columns">
+			<div class="form-wrapper">
+				<form ng-submit="submitPost()">
+				    <div>
+				      <label class="">
+				        <input type="text" class="" ng-model="post.title" placeholder="Post Title" />
+				      </label>
+				    </div>
+				    <div>
+				      <label>
+				        <input type="text" ng-model="post.author" placeholder="{{post.author}}" />
+				      </label>
+				    </div>
+				    <div>
+				      <label>
+				        <textarea type="text" placeholder="Add your text here" ng-model="post.body"></textarea>
+				      </label>
+				    </div>
+						<button type="submit" aria-label="post form submit" class="neon-btn">submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="medium-12 columns">
+			<div class="form-wrapper">
+				<div ng-repeat="post in posts">
+				  <a ng-href="#/posts/{{ post.$id }}">{{ post.title }}</a>
+				  <br>
+				  by:
+				  <a ng-href="#/">{{ post.author }}</a>
+				  <br>
+				  <a ng-click="deletePost(post)">delete</a>
+				  <p> {{post.body}} </p>
+				</div>
+			</div>
+		</div>
+	</div>

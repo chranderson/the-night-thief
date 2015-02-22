@@ -1,22 +1,22 @@
 
 
-<article class="entry-header">
-	<h1 class="entry-title">
-		{{ post.title }}
-	</h1>
-	  <p class="entry-details">
-	  	by
-	  	<a class="aside-author" ng-href="{{post.authorUrl}}">{{post.author}}</a>
-	  	<span class="url">({{ post.authorUrl | hostnameFromUrl }})</span>
-	  </p>
-	  <p class="entry-summary">{{post.body}}</p>
-	  <footer>
+		<article class="entry-header">
+			<h1 class="entry-title">
+				{{ post.title }}
+			</h1>
+			<p class="entry-details">
+				by
+				<a class="aside-author" ng-href="{{post.authorUrl}}">{{post.author}}</a>
+				<!-- <span class="url">({{ post.authorUrl | hostnameFromUrl }})</span> -->
+			</p>
+			<p class="entry-summary">{{post.body}}</p>
+			<footer>
 
-	  </footer>
-	</article>
-	<a ng-href="#/posts">Back to Posts</a>
+			</footer>
+		</article>
+		<a ng-href="#/posts">Back to Posts</a>
 
- <span>submitted by <a ng-href="#/users/{{ post.creatorUID }}">{{ post.creator }}</a></span>
-        &mdash;
-        <a ng-href="#/posts/{{ post.$id }}">comments</a>
-        <a ng-click="deletePost(post)">delete</a>
+		<span>submitted by <a ng-href="#/users/{{ post.creatorUID }}">{{ post.author }}</a></span>
+		&mdash;
+		<a ng-href="#/posts/{{ post.$id }}">comments</a>
+		<a ng-click="deletePost(post)">delete</a>

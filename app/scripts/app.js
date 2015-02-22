@@ -54,20 +54,40 @@ var app = angular
         templateUrl: 'views/film.html',
         controller: 'FilmCtrl'
       })
-      // .when('/posts', {
-      //   templateUrl: 'views/posts.html',
-      //   controller: 'PostsCtrl'
-      // })
-      // .when('/posts/:postId', {
-      //     templateUrl: 'views/showpost.html',
-      //     controller: 'PostViewCtrl'
-      //   })
+      .when('/posts', {
+        templateUrl: 'views/posts.html',
+        controller: 'PostsCtrl',
+        resolve: {
+          // controller will not be loaded until $waitForAuth resolves
+          // Auth refers to our $firebaseAuth wrapper above
+          'currentAuth': ['Auth', function(Auth) {
+            // $waitForAuth returns a promise so the resolve waits for it to complete
+            return Auth.auth.$waitForAuth();
+          }]
+        }
+      })
+      .when('/create-post', {
+        templateUrl: 'views/create-post.html',
+        controller: 'PostsCtrl',
+        resolve: {
+          // controller will not be loaded until $waitForAuth resolves
+          // Auth refers to our $firebaseAuth wrapper above
+          'currentAuth': ['Auth', function(Auth) {
+            // $waitForAuth returns a promise so the resolve waits for it to complete
+            return Auth.auth.$waitForAuth();
+          }]
+        }
+      })
+      .when('/posts/:postId', {
+          templateUrl: 'views/showpost.html',
+          controller: 'PostViewCtrl'
+        })
       .when('/contact', {
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl'
       })
       .when('/login', {
-        templateUrl: 'views/register.html',
+        templateUrl: 'views/login.html',
         controller: 'AuthCtrl',
         resolve: {
           // controller will not be loaded until $waitForAuth resolves
