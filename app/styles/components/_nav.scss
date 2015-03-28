@@ -43,7 +43,7 @@ ul.off-canvas-list li a {
 	padding:.8em 0;
 	padding-left:1.5em;
 	border-bottom:1px solid $black - 10;
-	color:#000;
+	color:$red;
 }
 
 
@@ -85,9 +85,9 @@ ul.side-nav {
 ul.side-nav li a:not(.button) {
 	color: $gray;
 	@media #{$medium-up} {
-		padding:0;
+		// padding:0;
 		border-right:2px solid $black;
-
+		color: $red;
 		// border-color:$black;
 		// padding:1em 0;
 		// padding-right:1.5em;
@@ -108,9 +108,16 @@ ul.side-nav li a:not(.button) {
 ul.side-nav li a:not(.button):active, ul.side-nav li a:not(.button):hover{
 	color: $red;
 	border-color:$red;
-
 }
 
+.active {
+	border-right:2px solid $red !important;
+	transition: border 0.5s ease;
+}
+
+ul.side-nav li{
+	// padding:1rem 0;
+}
 
 
 

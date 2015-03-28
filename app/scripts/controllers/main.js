@@ -13,9 +13,11 @@
 	 	var authstuff = currentAuth;
 
 	 	// $log.debug(authstuff.password.name);
-	 	if (!currentAuth)   {
-	 		$location.path('/login');
-	 	}
+	 	// if (!currentAuth)   {
+	 	// 	$location.path('/login');
+	 	// } else if (currentAuth) {
+	 	// 	$location.path('/posts')
+	 	// }
 
 
 

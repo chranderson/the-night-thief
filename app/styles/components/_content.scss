@@ -3,7 +3,7 @@
 	overflow-x:hidden;
 	overflow-y:auto;
 	-webkit-overflow-scrolling: touch;
-	padding-bottom:2em;
+	padding-bottom:10rem;
 	width:100%;
 
 	@media #{$medium-up} {
@@ -25,4 +25,10 @@
 	// border: 1px solid red !important;
 }
 
-.content-inner {}
+.content-inner {
+
+	@media #{$medium-up} {
+		padding:2rem;
+
+	}
+}

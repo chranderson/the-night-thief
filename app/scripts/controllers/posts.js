@@ -10,8 +10,9 @@ app.controller('PostsCtrl', function ($scope, $log, currentAuth, $location, Post
 	$scope.posts = Post.all;
 
 	$scope.post = {
-		'title': 'The Number One Post Title',
-		'author': 'Bradley',
+		'title': '',
+		'author': '',
+		'imgUrl': '',
 		'body': ''
 	};
 
@@ -21,8 +22,9 @@ app.controller('PostsCtrl', function ($scope, $log, currentAuth, $location, Post
 		Post.create($scope.post).then(function (ref) {
 			$location.path('/posts/' + ref.name());
 			$scope.post = {
-				'title': 'The Number One Post Title',
-				'author': 'Bradley',
+				'title': '',
+				'author': '',
+				'imgUrl': '',
 				'body': ''
 			};
 		});

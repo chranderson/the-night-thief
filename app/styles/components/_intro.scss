@@ -1,8 +1,21 @@
 .intro-animation {
+	display:block;
+	text-align:center;
 
-	@media #{$medium-up} {padding: 5% 10%;}
-	@media #{$large-up} {padding: 2% 10%;}
+	@media #{$medium-up} {
+		padding: 5% 10%;
+
+	}
+	@media #{$large-up} {
+		padding: 2% 10%;
+
+	}
+
+
 }
+
+
+
 #intro-logo {
 	// border: 1px solid blue !important;
 

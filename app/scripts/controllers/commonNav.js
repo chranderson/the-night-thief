@@ -24,5 +24,11 @@ app.controller('commonNavCtrl', ['$scope', '$log', '$location', 'Auth',
 	    		$location.path('/login');
 	    	};
 
+  	$scope.isActive = function(route) {
+  		console.log($location.path());
+  		console.log(route === $location.path())
+  		return route === $location.path();
+  	};
+
 }]);
 

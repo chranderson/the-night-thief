@@ -1,22 +1,20 @@
+		<article class="post">
 
+			<header class="post-header">
+				<img class="feature" ng-src="{{post.imgUrl}}" alt="" />
+				<section class="post-info">
+					<a ng-href="#/posts/{{ post.$id }}"><h2 class="post-title">{{ post.title }}</h2></a>
+					<span class="post-details">
+						by: <a ng-href="#/users/{{ post.creatorUID }}">{{ post.author }}</a>
+					</span>
+				</section>
+			</header>
 
-		<article class="entry-header">
-			<h1 class="entry-title">
-				{{ post.title }}
-			</h1>
-			<p class="entry-details">
-				by
-				<a class="aside-author" ng-href="{{post.authorUrl}}">{{post.author}}</a>
-				<!-- <span class="url">({{ post.authorUrl | hostnameFromUrl }})</span> -->
-			</p>
-			<p class="entry-summary">{{post.body}}</p>
-			<footer>
+			<section class="post-body">
 
-			</footer>
+				<p> {{post.body}} </p>
+
+				<a ng-click="deletePost(post)">delete</a>
+				<a ng-href="#/posts/{{ post.$id }}">comments</a>
+			</section>
 		</article>
-		<a ng-href="#/posts">Back to Posts</a>
-
-		<span>submitted by <a ng-href="#/users/{{ post.creatorUID }}">{{ post.author }}</a></span>
-		&mdash;
-		<a ng-href="#/posts/{{ post.$id }}">comments</a>
-		<a ng-click="deletePost(post)">delete</a>

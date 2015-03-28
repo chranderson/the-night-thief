@@ -11,16 +11,16 @@
 		margin:0 auto;
 	}
 }
-input[type="text"], input[type="password"], input[type="email"], textarea {
-	background: $black + 5;
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], textarea {
+	background: $black + 10;
 	border:none;
 	box-shadow: 0;
-
+	letter-spacing: 0.06rem;
 	// when error
 	// border-bottom:2px solid $red;
 
 	// normal
-	border-bottom:2px solid $red;
+	border-bottom:3px solid $red;
 
 	// successful
 	// border-bottom:2px solid $success;
@@ -30,20 +30,22 @@ input[type="text"], input[type="password"], input[type="email"], textarea {
 	margin: 2rem 0;
 }
 
-input[type="text"], input[type="password"], input[type="email"] {
-	padding-top:1.5rem;
+input[type="text"], input[type="password"], input[type="email"], input[type="url"] {
+	// padding-top:1.5rem;
 	padding-bottom:1.5rem;
+	padding-top:2rem;
+	// padding-bottom:2rem;
 	color: $white - 30;
 	// text-shadow: 0 -3px 8px rgba(0,0,0,0.7);
 }
-input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, textarea:focus {
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, textarea:focus, input[type="url"]:focus {
 	background: $black + 3;
 	box-shadow: none;
 	color: $white;
 }
 
 
-input[type="text"]:active, textarea:active {
+input[type="text"]:active, textarea:active, input[type="url"]:active {
 	background: $black + 3;
 	box-shadow: none;
 }
@@ -57,29 +59,30 @@ textarea {
 	min-height:10rem;
 }
 
+
 ::-webkit-input-placeholder {
- color: $black - 0;
+ color: $white - 60;
  // text-transform: uppercase;
  // text-align: center;
  // font-weight: bold;
 }
 :-moz-placeholder { /* older Firefox*/
  // font-size:14px;
- color: $black - 0;
+ color: $white - 60;
  // text-transform: uppercase;
  // text-align: center;
  // font-weight: bold;
 }
 ::-moz-placeholder { /* Firefox 19+ */
  // font-size: 14px;
- color: $black - 0;
+ color: $white - 60;
  // text-transform: uppercase;
  // text-align: center;
  // font-weight: bold;
 }
 :-ms-input-placeholder {
  // font-size: 14px;
- color: $black - 0;
+ color: $white - 60;
  // text-transform: uppercase;
  // text-align: center;
  // font-weight: bold;

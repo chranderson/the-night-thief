@@ -7,12 +7,12 @@
       /* config dom id (optional) + config particles params */
       particlesJS('particles-js', {
         particles: {
-          color: '#fff',
+          color: '#ee5555',
           shape: 'triangle', // "circle", "edge" or "triangle"
           opacity: 1,
           size: 0.5,
           size_random: true,
-          nb: 500,
+          nb: 800,
           line_linked: {
             enable_auto: false,
             distance: 100,

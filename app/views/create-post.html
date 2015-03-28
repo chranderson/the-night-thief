@@ -16,6 +16,11 @@
 				    </div>
 				    <div>
 				      <label>
+				        <input type="url" ng-model="post.imgUrl" placeholder="image url" />
+				      </label>
+				    </div>
+				    <div>
+				      <label>
 				        <input type="text" ng-model="post.author" placeholder="{{post.author}}" />
 				      </label>
 				    </div>
@@ -29,18 +34,22 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<div class="medium-12 columns">
-			<div class="form-wrapper">
-				<div ng-repeat="post in posts">
-				  <a ng-href="#/posts/{{ post.$id }}">{{ post.title }}</a>
-				  <br>
-				  by:
-				  <a ng-href="#/">{{ post.author }}</a>
-				  <br>
-				  <a ng-click="deletePost(post)">delete</a>
-				  <p> {{post.body}} </p>
-				</div>
-			</div>
-		</div>
-	</div>
+	<article class="post" ng-repeat="post in posts">
+
+		<header class="post-header">
+			<img class="feature" ng-src="{{post.imgUrl}}" alt="" />
+			<section class="post-info">
+				<a ng-href="#/posts/{{ post.$id }}"><h2 class="post-title">{{ post.title }}</h2></a>
+				<span class="post-details">
+					by: <a ng-href="#/users/{{ post.creatorUID }}">{{ post.author }}</a>
+				</span>
+			</section>
+		</header>
+
+		<section class="post-body">
+
+			<p> {{post.body}} </p>
+
+			<a ng-click="deletePost(post)">delete</a>
+		</section>
+	</article>

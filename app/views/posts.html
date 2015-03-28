@@ -1,26 +1,19 @@
+<article class="post" ng-repeat="post in posts">
 
-
-<header>
-<h1>Here's whats new folks!</h1>
-		<p>read my posts</p>
+	<header class="post-header">
+		<img class="feature" ng-src="{{post.imgUrl}}" alt="" />
+		<section class="post-info">
+			<a ng-href="#/posts/{{ post.$id }}"><h2 class="post-title">{{ post.title }}</h2></a>
+			<span class="post-details">
+				by: <a ng-href="#/users/{{ post.creatorUID }}">{{ post.author }}</a>
+			</span>
+		</section>
 	</header>
-	<br/>
 
-	<div class="row">
-		<div class="medium-12 columns">
-			<div class="form-wrapper">
-				<div ng-repeat="post in posts">
-				  <a ng-href="#/posts/{{ post.$id }}">{{ post.title }}</a>
-				  <br>
-				  by:
-				  <a ng-href="#/">{{ post.author }}</a>
-				  <br>
-				  <a ng-href="#/users/{{ post.creatorUID }}">
-				  <br>
-				  <a ng-click="deletePost(post)">delete</a>
-				  <p> {{post.body}} </p>
-				  <hr>
-				</div>
-			</div>
-		</div>
-	</div>
+	<section class="post-body">
+
+		<p> {{post.body}} </p>
+
+		<a ng-show="authData" ng-click="deletePost(post)">delete</a>
+	</section>
+</article>
